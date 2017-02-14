@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <title>CSS</title>
+        <link rel="stylesheet" type="text/css" href="./CSS_files/markdownbody.github.css">
+        <link rel="stylesheet" type="text/css" href="./CSS_files/lhjs.github-gist.css">
+        <link rel="stylesheet" type="text/css" href="./CSS_files/amWiki.css">
+    </head>
+
+    <body>
+        <!-- 头部 -->
+        <header class="header">
+        </header>
+        <!-- 页面 -->
+        <div class="container">
+            <div class="nav">
+                <div class="menu-filter">
+                    <svg>
+                        <use xlink:href="#icon:navFilter"></use>
+                    </svg>
+                    <input type="text" id="menuFilter" value="" placeholder="请输入筛选条件" title="请输入筛选条件">
+                    <i class="off" title="清空筛选">×</i>
+                </div>
+                <div class="menu-search" id="searchShow" title="全库搜索">
+                    <svg>
+                        <use xlink:href="#icon:search"></use>
+                    </svg>
+                </div>
+                <!--<div class="menu-fold" title="展开/折叠导航栏所有菜单">
+                    <svg>
+                        <use xlink:href="#navFolder1"></use>
+                    </svg>
+                </div>-->
+                <nav class="menubar" id="menuBar"><h4 id="-file-" class=""><svg><use xlink:href="#icon:navHome"></use></svg><a href="http://uekdev.coding.me/layout/?file=%E9%A6%96%E9%A1%B5" title="返回首页">首页</a></h4>
+<h5 id="html-css-" class="on"><svg><use xlink:href="#icon:navArrow"></use></svg>html、css初识</h5>
+<ul style="display: block;">
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/01-html%E7%AE%80%E4%BB%8B%E6%A0%87%E7%AD%BE" title="html简介标签" class="">html简介标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont" title="css使用和font" class="on">css使用和font</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B" title="css盒子模型">css盒子模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/04-css%E6%B5%AE%E5%8A%A8" title="css浮动">css浮动</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/05-css%E5%AE%9A%E4%BD%8D" title="css定位">css定位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/06-css%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98" title="css兼容问题">css兼容问题</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/07-css%E8%A1%A5%E5%85%85%E5%B1%9E%E6%80%A7" title="css补充属性">css补充属性</a></li>
+</ul>
+<h5 id="html-css-"><svg><use xlink:href="#icon:navArrow"></use></svg>html、css进阶</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/01-html5%E7%AE%80%E4%BB%8B" title="html5简介">html5简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/010-css3%E9%A2%9C%E8%89%B2%E5%92%8C%E6%B8%90%E5%8F%98" title="css3颜色和渐变">css3颜色和渐变</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/011-css3%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2" title="css3用户界面">css3用户界面</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/012-css3%E6%96%87%E6%9C%AC%E6%A8%A1%E5%9E%8B" title="css3文本模型">css3文本模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/013-css3%202D%E8%BD%AC%E6%8D%A2" title="css3 2D转换">css3 2D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/014-css3%203D%E8%BD%AC%E6%8D%A2" title="css3 3D转换">css3 3D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/015-css3%E5%8A%A8%E7%94%BB" title="css3动画">css3动画</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/016-css3%E5%93%8D%E5%BA%94%E5%BC%8F" title="css3响应式">css3响应式</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/017-css3%E5%8D%95%E4%BD%8D" title="css3单位">css3单位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/018-css3%E5%90%84%E7%A7%8D%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8%E4%BB%8B%E7%BB%8D" title="css3各种浏览器内核介绍">css3各种浏览器内核介绍</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/02-html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE" title="html5语义化标签">html5语义化标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/03-html5%E8%A1%A8%E5%8D%95%E6%96%B0%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90" title="html5表单新功能解析">html5表单新功能解析</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg" title="html5可伸缩矢量图形svg">html5可伸缩矢量图形svg</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/05-css3%E7%AE%80%E4%BB%8B" title="css3简介">css3简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/06-css3%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8" title="css3新增选择器">css3新增选择器</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/07-css3%E8%BE%B9%E6%A1%86" title="css3边框">css3边框</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/08-css3%E8%83%8C%E6%99%AF" title="css3背景">css3背景</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/09-css3%E8%BF%87%E6%B8%A1%E5%80%92%E5%BD%B1" title="css3过渡倒影">css3过渡倒影</a></li>
+</ul>
+<h5 id="-"><svg><use xlink:href="#icon:navArrow"></use></svg>移动端布局</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" title="移动端环境搭建">移动端环境搭建</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/02-hack" title="hack">hack</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/03-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%A7%86%E5%8F%A3viewport" title="移动端视口viewport">移动端视口viewport</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/04-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E7%99%BE%E5%88%86%E6%AF%94%E3%80%81%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端布局之百分比、流式布局">移动端布局之百分比、流式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/05-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端的响应式布局">移动端的响应式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/06-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B" title="移动端布局之弹性盒模型">移动端布局之弹性盒模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/07-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8Brem" title="移动端布局之rem">移动端布局之rem</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/08-12%E7%A7%8D%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F" title="12种移动端常见布局方式">12种移动端常见布局方式</a></li>
+</ul>
+</nav>
+            </div>
+            <div class="main" id="main">
+                <article class="markdown-body" id="view"><h1 id="css"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#CSS" name="CSS"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>CSS</h1>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#名词解释" name="名词解释"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>名词解释</h2>
+<h3 id="-div-css-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#网页标准布局：div+css网页标准布局方式" name="网页标准布局：div+css网页标准布局方式"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>网页标准布局：div+css网页标准布局方式</h3>
+<h4 id="div">div</h4>
+<blockquote>
+<p>全称 division 意为"区块、分割"div标签是一个无意义的容器标签，用于将页面划分出不同的区域。 通过div将复杂的页面进行细分块，可以将问题细分一个一个解决，所以通过div将页面分块是一个关键的工作，也是决定最终效果与质量的前提。</p>
+</blockquote>
+<h4 id="css-cascading-style-sheet-">css（Cascading Style Sheet）</h4>
+<blockquote>
+<p>中文翻译为层叠样式表，是用于控制网页样式并允许将样式信息与网页内容分离的一种标记性语言。</p>
+</blockquote>
+<p>   div承载的是内容，css承载的是样式。</p>
+<h3 id="div-css-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#div+css布局优点" name="div+css布局优点"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>div+css布局优点</h3>
+<ul>
+<li>div+css是web标准，顺应潮流。</li>
+<li>弥补html标签的功能缺陷。</li>
+<li>加快页面加载的速度，降低流量费用。</li>
+<li>对搜索引擎更加友好，更有利于收录和抓取您的页面。</li>
+<li>使页面的内容和表现分离，便于维护和管理，节省大量的人力和成本。  </li>
+</ul>
+<h3 id="div-css-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#div+css布局缺点" name="div+css布局缺点"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>div+css布局缺点</h3>
+<ul>
+<li>使用相对复杂相对html中的table布局来说，div+css布局相对要复杂些，需要掌握的知识更多些</li>
+<li>css网站设计的浏览器兼容性问题比较突出，各个浏览器对CSS的支持略有不同，但这些细小的不同也会使网站在各个浏览器中有较大的显示差异，甚至是面目全非。</li>
+</ul>
+<h2 id="css-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#CSS 的引入方式" name="CSS 的引入方式"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>CSS 的引入方式</h2>
+<p>  要利用div+css的布局方式，那么首先我们来看如何引入css。</p>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#行内样式表" name="行内样式表"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>行内样式表</h3>
+<blockquote>
+<p>顾名思义，我们要修饰哪个元素我们就将css写在哪个标签上。</p>
+</blockquote>
+<pre><code class="lang-html hljs xml">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">'属性:值;属性:值……'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html hljs xml">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">'width:200px;height:200px;background:red'</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#嵌入样式表" name="嵌入样式表"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>嵌入样式表</h3>
+<blockquote>
+<p>css样式表是写在html文件中的，因此我们称之为嵌入样式表。</p>
+</blockquote>
+<pre><code class="lang-html hljs xml">  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="undefined"> 选择器{属性：值;属性：值;……}</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+      <span class="hljs-selector-tag">div</span>{
+        <span class="hljs-attribute">width</span>:<span class="hljs-number">200px</span>;
+        <span class="hljs-attribute">height</span>:<span class="hljs-number">200px</span>;
+        <span class="hljs-attribute">background</span>:red;
+      }
+   </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</code></pre>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#外部样式表" name="外部样式表"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>外部样式表</h3>
+<blockquote>
+<p>该方法是需要我们引入一个外部的css样式表。</p>
+</blockquote>
+<ul>
+<li>新建css样式表</li>
+<li>引入 <code>&lt;link rel='stylesheet' type='text/css' href='地址'&gt;</code></li>
+</ul>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">'stylesheet'</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'text/css'</span> <span class="hljs-attr">href</span>=<span class="hljs-string">'uek.css'</span>&gt;</span>
+</code></pre>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#导入样式表" name="导入样式表"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>导入样式表</h3>
+<blockquote>
+<p>该方法是将一个css样式表导入到另一个css样式表中。</p>
+</blockquote>
+<ul>
+<li><code>@import</code> url(外部样式表位置)</li>
+</ul>
+<pre><code class="lang-css hljs"> @<span class="hljs-keyword">import</span> url(<span class="hljs-string">'index.css'</span>);
+</code></pre>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#优先级" name="优先级"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>优先级</h2>
+<p> 现在我们可以有4中方式将css引入到我们的页面当中。那么当一个html文件中利用多种方式引入css，哪种方式会作用到页面元素呢？因此我们需要引入优先级。优先级也就是说哪种样式会优先作用到元素。</p>
+<ul>
+<li>行内样式最高</li>
+<li>其他的样式表，优先级一样，按照导入的顺序来确定他们是否起作用。</li>
+</ul>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#选择器" name="选择器"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>选择器</h2>
+<p>  当我们定义一条样式规则时候，这条样式规则会作用于网页当中的某些元素，而我们的规定的这些元素的规则就叫做选择器。</p>
+<blockquote>
+<p>在此处我们需要注意，css既然是用来修饰页面中元素样式的，那么页面中必须存在该元素。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">格式</th>
+<th style="text-align:left">作用范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id选择器</td>
+<td style="text-align:left">#id</td>
+<td style="text-align:left">选择页面中指定id名的元素，id是唯一的</td>
+</tr>
+<tr>
+<td style="text-align:left">类名选择器</td>
+<td style="text-align:left">.classname</td>
+<td style="text-align:left">选择页面中指定类名的元素集合</td>
+</tr>
+<tr>
+<td style="text-align:left">标签选择器</td>
+<td style="text-align:left">tagname</td>
+<td style="text-align:left">选择页面中所有指定标签元素集合</td>
+</tr>
+<tr>
+<td style="text-align:left">交叉选择器</td>
+<td style="text-align:left">tagname.classname</td>
+<td style="text-align:left">选择页面中同时符合俩个条件元素集合</td>
+</tr>
+<tr>
+<td style="text-align:left">群组选择器</td>
+<td style="text-align:left">多个选择器用‘，’隔开</td>
+<td style="text-align:left">选择多个选择器指定元素</td>
+</tr>
+<tr>
+<td style="text-align:left">后代选择器</td>
+<td style="text-align:left">父级 空格 子级</td>
+<td style="text-align:left">选择某父元素下面的子元素</td>
+</tr>
+<tr>
+<td style="text-align:left">通用选择器</td>
+<td style="text-align:left">*</td>
+<td style="text-align:left">选择页面中所有的元素</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#伪类选择器" name="伪类选择器"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>伪类选择器</h2>
+<p>   同一个html元素在不同状态下的不同样式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选择器</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">:link</td>
+<td style="text-align:left">未访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">:active</td>
+<td style="text-align:left">选定的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">:hover</td>
+<td style="text-align:left">鼠标移动到链接上</td>
+</tr>
+<tr>
+<td style="text-align:left">:visited</td>
+<td style="text-align:left">已访问的链接</td>
+</tr>
+<tr>
+<td style="text-align:left">:first-letter</td>
+<td style="text-align:left">选择段落中的第一个字母或中文字符</td>
+</tr>
+<tr>
+<td style="text-align:left">:first-line</td>
+<td style="text-align:left">选择文本中的首行</td>
+</tr>
+</tbody>
+</table>
+<h2 id="css-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#CSS的继承性和叠加性" name="CSS的继承性和叠加性"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>CSS的继承性和叠加性</h2>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#继承性" name="继承性"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>继承性</h3>
+<blockquote>
+<p>后代元素会继承前辈元素的一些属性和样式。</p>
+</blockquote>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#叠加性" name="叠加性"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>叠加性</h3>
+<blockquote>
+<p>同一个元素，被多个样式规则指定。</p>
+</blockquote>
+<p>因为有了继承性和叠加性，就有了css的优先级。</p>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#选择器的优先级" name="选择器的优先级"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>选择器的优先级</h2>
+<p>  所谓的优先级，指的就是哪条样式规则会最作用于指定的元素<br>  <img src="./CSS_files/001-yxj.png" alt="选择器优先级">;</p>
+<h2 id="css-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#CSS注释" name="CSS注释"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>CSS注释</h2>
+<p><code>/* css code */</code>  </p>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#文字属性" name="文字属性"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>文字属性</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">font-size</td>
+<td style="text-align:left">文字大小</td>
+<td style="text-align:left">px、em</td>
+</tr>
+<tr>
+<td style="text-align:left">font-family</td>
+<td style="text-align:left">文字字体</td>
+<td style="text-align:left">微软雅黑、宋体</td>
+</tr>
+<tr>
+<td style="text-align:left">font-weight</td>
+<td style="text-align:left">文字粗细</td>
+<td style="text-align:left">bold（加粗）normal（正常）100~900（9级加粗）</td>
+</tr>
+<tr>
+<td style="text-align:left">font-style</td>
+<td style="text-align:left">文字风格</td>
+<td style="text-align:left">normal（默认值标准样式）italic    （斜体）oblique（倾斜）inherit</td>
+</tr>
+<tr>
+<td style="text-align:left">color</td>
+<td style="text-align:left">文字颜色</td>
+<td style="text-align:left">rgb、#ffffff、red</td>
+</tr>
+</tbody>
+</table>
+<p><code>字体缩写 font: bold 12px/20px "宋体" ;  如果缩写至少要定义 font-size 和font-family两个属性</code></p>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#文本段落" name="文本段落"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>文本段落</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">text-align</td>
+<td style="text-align:left">设置文本水平对齐方式</td>
+<td style="text-align:left">left左对齐，right右对齐，center居中对齐，justify两端对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">vertical-align</td>
+<td style="text-align:left">设置元素垂直对齐方式</td>
+<td style="text-align:left">super上标，sub下标，top与行中最高元素顶端对齐，middle父元素的中间位置，bottom与行中最低元素底端对齐.常用来对齐表单元素和图片，在块元素内不起作用，在行内元素中起作用。</td>
+</tr>
+<tr>
+<td style="text-align:left">line-height</td>
+<td style="text-align:left">设置元素的行高字体行高，单行文字一般用来设置居中，</td>
+<td style="text-align:left">常用单位em</td>
+</tr>
+<tr>
+<td style="text-align:left">text-indent</td>
+<td style="text-align:left">设置首行的缩进方式</td>
+<td style="text-align:left">常用单位em</td>
+</tr>
+<tr>
+<td style="text-align:left">word-break</td>
+<td style="text-align:left">自动换行</td>
+<td style="text-align:left">break-all</td>
+</tr>
+<tr>
+<td style="text-align:left">text-transform</td>
+<td style="text-align:left">设置文本的大小写</td>
+<td style="text-align:left">none（无转换） capitalize（将每个单词的第一个字母转换成大写）<br> uppercase（将每个单词转换成大写）lowercase（将每个单词转换成小写）</td>
+</tr>
+<tr>
+<td style="text-align:left">letter-spacing</td>
+<td style="text-align:left">设置字间距</td>
+<td style="text-align:left">normal、length、percentage（css3）</td>
+</tr>
+<tr>
+<td style="text-align:left">text-indent</td>
+<td style="text-align:left">设置首行缩进</td>
+<td style="text-align:left">length、percentage</td>
+</tr>
+<tr>
+<td style="text-align:left">text-size-adjust</td>
+<td style="text-align:left">设置移动端页面中对象文本大小</td>
+<td style="text-align:left">（auto）文本大小根据设备尺寸进行调整。（none）文本大小不会根据设备尺寸进行调整。（percentage）用百分比来指定文本大小在设备尺寸不同的情况下如何调整。</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"screen"</span>&gt;</span><span class="css">
+   <span class="hljs-selector-class">.fontcap</span>{
+     <span class="hljs-attribute">text-transform</span>: capitalize;
+   }
+   <span class="hljs-selector-class">.fontup</span>{
+     <span class="hljs-attribute">text-transform</span>: uppercase;
+   }
+   <span class="hljs-selector-class">.fontlow</span>{
+     <span class="hljs-attribute">text-transform</span>: lowercase;
+   }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fontcap"</span>&gt;</span>web ui php<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fontup"</span>&gt;</span>web ui php<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fontlow"</span>&gt;</span>WEB UI PHP<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+</article>
+                <!-- 上下翻页 -->
+                <div class="main-sibling on" id="mainSibling">
+                    <p><span>上一篇：</span>
+                        <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/01-html%E7%AE%80%E4%BB%8B%E6%A0%87%E7%AD%BE">html简介标签</a>
+                    </p>
+                    <p><span>下一篇：</span>
+                        <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B">css盒子模型</a>
+                    </p>
+                </div>
+                <!-- 全库搜索 -->
+                <div class="search-box" id="searchBox">
+                    <div class="search-update">
+                        <input type="button" id="searchUpdate" value="更新所有缓存">
+                        <div class="text">
+                            <p>上次完全更新：<time id="cacheLasttime">0000-00-00 00:00:00</time></p>
+                            <p>文档总数：<b id="cacheDocTotal">34</b> / <span>已缓存：<i id="cacheState">8%</i></span></p>
+                        </div>
+                    </div>
+                    <h2>全库搜索</h2>
+                    <div class="search-input">
+                        <input type="text" id="searchText" placeholder="请输入搜索内容">
+                        <input type="button" id="search" value="搜 索">
+                    </div>
+                    <div class="search-results" id="results">
+                        <div class="search-result-message" id="resultMsg"></div>
+                        <ul class="search-list"></ul>
+                        <div class="search-result-more" id="resultMore">显示更多</div>
+                        <script id="template:searchResult" type="text/html">
+                            <li class="search-item">
+                                <a href="?file={{path}}">
+                                    <div class="content">
+                                        <strong>{{title}}</strong>
+                                        {{api}}
+                                        {{content}}
+                                    </div>
+                                    <div class="bottom">
+                                        <p>位置：<span>{{path}}</span></p>
+                                        <div class="time">最后缓存于
+                                            <time>{{time}}</time>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </script>
+                    </div>
+                </div>
+                <!-- 接口测试 -->
+
+            </div>
+        </div>
+        <!-- 签名 -->
+        <footer>
+            <div class="signature">Powered by
+                <a href="https://github.com/TevinLi/amWiki" target="_blank">amWiki</a>
+            </div>
+        </footer>
+        <!-- 返回顶部 -->
+        <aside>
+            <div class="back-top">
+                <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#" class="back-icon">
+                    <svg>
+                        <use xlink:href="#backTop"></use>
+                    </svg>
+                </a>
+                <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont#" class="back-text">返回顶部</a>
+            </div>
+        </aside>
+        <!-- js -->
+        <div class="hidden">
+            <script type="text/javascript" src="./CSS_files/gbk.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/jquery-compat-3.1.0.min.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/marked.min.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/highlight.min.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/raphael-min.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/flowchart.min.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/amWiki.tools.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/amWiki.storage.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/amWiki.search.js.下载"></script>
+            <script type="text/javascript" src="./CSS_files/amWiki.docs.js.下载"></script>
+
+            <script type="text/javascript" src="./CSS_files/amWiki.js.下载"></script>
+        </div>
+        <!-- svg -->
+        <div class="hidden" id="svgSymbols"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="icon:navHome" viewBox="0 0 32 32" style="fill:currentColor">
+        <path d="m16 0l-16 16h4v16h24v-16h4l-16-16zm8 28h-6v-6h-4v6h-6v-14l8-6 8 5.7v14z"></path>
+    </symbol>
+    <symbol id="icon:navFilter" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M400.627447 927.694607c-25.929556 0-46.966685-21.037129-46.966685-46.966685L353.660762 542.308283 74.339102 172.687014c-11.313673-14.065344-13.514805-33.45188-5.748934-49.719378 7.828292-16.267499 24.339338-26.663266 42.380226-26.663266l801.437042 0c17.673521 0 33.879622 9.968026 41.891086 25.746384s6.482645 34.736129-3.975545 48.985668L669.540036 541.14683l0 211.700563c0 25.929556-21.037129 46.966685-46.966685 46.966685-25.929556 0-46.966685-21.037129-46.966685-46.966685L575.606667 525.796214c0-9.968026 3.180436-19.691481 9.051143-27.764344l235.101529-307.793108L208.94173 190.238762l228.317009 306.142515c6.665817 8.317433 10.335393 18.7132 10.335393 29.41596l0 354.931708C447.594131 906.657478 426.557002 927.694607 400.627447 927.694607z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navArrow" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M959.391517 255.877715 511.696078 703.573153 64.00064 255.877715Z"></path>
+        </g>
+    </symbol>
+    <symbol id="backTop" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M849.513502 524.698207l-308.405045-310.430168c-6.833639-6.867408-15.761985-10.1645-24.656563-10.095939-1.201361-0.103354-2.231831-0.686638-3.432169-0.686638-5.015224 0-9.68457 1.167592-13.978363 3.090385-4.325515 1.647523-8.445346 4.155646-11.948123 7.658424l-278.290167 277.807167c-13.426801 13.392008-13.46057 35.130102-0.034792 48.556902 6.695492 6.729262 15.487739 10.096962 24.312732 10.096962 8.7902 0 17.546631-3.367701 24.27794-10.028401l221.320665-220.97581 0 604.927459c0 18.99154 15.384385 34.340109 34.340109 34.340109 18.952654 0 34.340109-15.34857 34.340109-34.340109L547.359834 318.007751l253.460666 255.111259c6.696516 6.730285 15.557324 10.129708 24.347524 10.129708s17.512862-3.331885 24.208355-9.994632C862.872764 559.897893 862.90551 538.123984 849.513502 524.698207zM890.757858 134.805242 135.282614 134.805242c-18.954701 0-34.340109-15.384385-34.340109-34.340109s15.384385-34.340109 34.340109-34.340109l755.475244 0c18.98847 0 34.339086 15.384385 34.339086 34.340109S909.745305 134.805242 890.757858 134.805242z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navStart" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M102.548584 218.264049l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 461.299271l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 704.334493l818.644959 0 0 102.33062-818.644959 0 0-102.33062Z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navClose" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M588.99845 509.618605l412.775194-412.775194c19.051163-19.051163 19.051163-57.153488 0-82.555039-19.051163-19.051163-57.153488-19.051163-82.555039 0L512.793798 427.063566 100.018605 20.63876c-19.051163-19.051163-57.153488-19.051163-82.555039 0-19.051163 19.051163-19.051163 57.153488 0 82.555039L430.23876 509.618605l-412.775194 412.775194c-19.051163 19.051163-19.051163 57.153488 0 82.555039C30.164341 1011.299225 49.215504 1017.649612 61.916279 1017.649612s31.751938-6.350388 38.102326-19.051163L512.793798 592.173643l412.775194 412.775194c12.700775 12.700775 25.40155 19.051163 38.102326 19.051163 12.700775 0 31.751938-6.350388 38.102326-19.051163 19.051163-19.051163 19.051163-57.153488 0-82.555039L588.99845 509.618605z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder1" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M853.333333 260.352 512 260.352 512 192c0-35.328-28.672-64-64-64L170.666667 128c-47.104 0-85.333333 38.229333-85.333333 85.333333l0 132.352L85.333333 810.666667l0 0.085333c0 46.933333 38.4 85.333333 85.333333 85.333333l682.666667 0c46.933333 0 85.333333-38.4 85.333333-85.333333l0-465.066667C938.666667 298.752 900.266667 260.352 853.333333 260.352zM874.666667 789.418667c0 23.466667-19.2 42.666667-42.666667 42.666667L192 832.085333c-23.466667 0-42.666667-19.2-42.666667-42.666667l0-422.4L149.333333 263.082667 149.333333 234.666667c0-23.552 19.114667-42.666667 42.666667-42.666667l213.333333 0c23.552 0 42.666667 19.114667 42.666667 42.666667l0 89.685333 384 0c23.466667 0 42.666667 19.2 42.666667 42.666667L874.666667 789.418667z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder2" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M950.048 530.016c0-12-10.016-18.016-28-18.016l-580 0c-14.016 0-30.016 4-46.016 12s-30.016 16-38.016 28l-158.016 194.016c-6.016 8-8 14.016-8 20 0 12 8 20 28 20l580 0c14.016 0 30.016-4 46.016-12s28-18.016 38.016-28l156-194.016c6.016-8 10.016-16 10.016-22.016zM342.048 444l408 0 0-86.016c0-14.016-4-26.016-14.016-36s-22.016-14.016-36-14.016l-308 0c-14.016 0-26.016-6.016-36-16s-14.016-22.016-14.016-36l0-34.016c0-14.016-6.016-26.016-16-36s-22.016-16-36-16l-170.016 0c-14.016 0-26.016 6.016-36 16s-16 22.016-16 36l0 454.016 136-168c16-18.016 38.016-34.016 62.016-46.016 26.016-12 52-18.016 76-18.016zM1018.048 530.016c0 22.016-8 44-24 64l-158.016 194.016c-16 20-36 34.016-62.016 46.016-26.016 14.016-50.016 20-74.016 20l-580 0c-34.016 0-62.016-12-84-36-24-24-36-52-36-84l0-512c0-32 12-60 36-84 22.016-24 50.016-36 84-36l170.016 0c32 0 60 12 84 36s36 52 36 84l0 16 290.016 0c32 0 60 12 84 36s36 52 36 84l0 86.016 102.016 0c18.016 0 36 4 52 12 16 10.016 28 22.016 36 38.016 6.016 12 8 24 8 36z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:linkAnchor" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M616.601336 477.134935c0-96.148827-76.528977-174.34477-170.628122-174.34477l-138.339742 0.027629c-98.788957 0.007163-179.177845 78.195943-179.177845 174.330444l0.017396 69.698408c-0.024559 96.15292 80.406285 174.359097 179.205475 174.359097l38.696324 0.00307c19.815301-0.024559 35.851533-15.624862 35.848463-34.882462 0.00307-19.250436-16.032138-34.853809-35.823903-34.853809l-38.749536 0c-59.268872-0.007163-109.451808-46.925752-109.465111-104.604406l0-69.733201c0-57.668421 50.154283-104.58394 109.462041-104.594173l138.329509-0.024559c56.472176 0.024559 100.867292 46.911426 100.890828 104.618732l1.496074 34.872229c0 9.627265 3.810792 18.365276 9.969049 24.65554 6.178723 6.310729 14.728446 10.209526 24.153096 10.206456 18.84623 0.00307 34.118052-15.600303 34.118052-34.860972L616.601336 477.134935zM895.526977 477.152331c0.024559-96.148827-80.406285-174.355003-179.205475-174.359097l-38.696324-0.00307c-19.815301 0.024559-35.851533 15.627932-35.851533 34.882462 0 19.254529 16.036231 34.853809 35.826973 34.857902l38.745443 0c59.268872 0.00307 109.451808 46.922682 109.469204 104.604406l0 69.733201c0 57.668421-50.154283 104.58394-109.462041 104.591103l-138.329509 0.027629c-56.472176-0.024559-100.867292-46.911426-100.890828-104.618732l-1.496074-34.872229c0-9.630335-3.810792-18.365276-9.969049-24.65554-6.181793-6.314823-14.728446-10.209526-24.153096-10.205433-18.84623-0.007163-34.119075 15.600303-34.119075 34.860972l0 34.872229c0 96.145757 76.532047 174.340677 170.631192 174.340677l138.339742-0.024559c98.788957-0.007163 179.177845-78.199013 179.173752-174.330444L895.526977 477.152331z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:loading" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M955.733333 765.866667c0 0 0 2.133333 0 2.133333-12.8 21.333333-38.4 27.733333-57.6 14.933333-19.2-10.666667-27.733333-36.266667-17.066667-57.6l0 0c36.266667-64 57.6-136.533333 57.6-213.333333s-21.333333-151.466667-57.6-213.333333l0 0c-10.666667-19.2-4.266667-44.8 17.066667-57.6 21.333333-12.8 46.933333-4.266667 57.6 14.933333 0 0 0 2.133333 0 2.133333 42.666667 74.666667 68.266667 162.133333 68.266667 253.866667S998.4 691.2 955.733333 765.866667zM768 955.733333C768 955.733333 765.866667 955.733333 768 955.733333c-76.8 42.666667-164.266667 68.266667-256 68.266667s-179.2-25.6-253.866667-68.266667c0 0-2.133333 0-2.133333 0-21.333333-12.8-27.733333-38.4-14.933333-57.6 12.8-21.333333 38.4-27.733333 57.6-14.933333 0 0 0 0 2.133333 0l0 0C362.666667 917.333333 435.2 938.666667 512 938.666667s149.333333-21.333333 211.2-57.6l0 0c0 0 0 0 2.133333 0 21.333333-12.8 46.933333-4.266667 57.6 14.933333C795.733333 917.333333 789.333333 942.933333 768 955.733333zM727.466667 142.933333 727.466667 142.933333C663.466667 106.666667 590.933333 85.333333 512 85.333333s-151.466667 21.333333-213.333333 57.6l0 0c-19.2 10.666667-44.8 4.266667-57.6-17.066667C228.266667 106.666667 234.666667 81.066667 256 68.266667c0 0 2.133333 0 2.133333 0C332.8 25.6 420.266667 0 512 0s179.2 25.6 253.866667 68.266667c0 0 2.133333 0 2.133333 0 21.333333 12.8 27.733333 38.4 14.933333 57.6C772.266667 147.2 746.666667 153.6 727.466667 142.933333zM125.866667 782.933333C106.666667 795.733333 81.066667 789.333333 68.266667 768c0 0 0-2.133333 0-2.133333C25.6 691.2 0 603.733333 0 512s25.6-179.2 68.266667-253.866667c0 0 0-2.133333 0-2.133333 12.8-21.333333 38.4-27.733333 57.6-14.933333 21.333333 12.8 27.733333 38.4 14.933333 57.6 0 0 0 0 0 2.133333l0 0C106.666667 362.666667 85.333333 435.2 85.333333 512s21.333333 149.333333 57.6 211.2l0 0c0 0 0 0 0 2.133333C153.6 746.666667 147.2 772.266667 125.866667 782.933333z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:search" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M941.427376 910.59516c-16.080234 16.010649-69.712735 18.382673-85.792968 2.378164L631.709429 684.444491c61.748343-50.087768 70.796416-148.074454 70.796416-199.626573 0-148.759045-109.305475-260.410961-257.868045-260.410961-148.56871 0-256.612449 109.908202-256.612449 258.673387 0 148.752906 102.096283 261.730003 250.664993 261.730003 30.759561 0 44.760436 0.037862 72.293513-9.466606l0.38681 1.483794c7.000438-3.544733 77.435627-12.098549 77.435627 60.962443 0 20.455891-15.623839 41.425482-34.932604 48.178279-32.66905 11.420097-75.431993 16.936741-108.60144 16.936741-211.592093 0-381.180536-169.367409-381.180536-380.807029 0-211.370035 169.589466-382.79122 381.180536-382.79122 211.667817 0 381.180536 171.421184 381.180536 382.79122 0 65.812915-12.979616 127.682008-40.201607 179.176822l157.154249 159.189605C959.423239 836.475046 957.439048 894.660236 941.427376 910.59516L941.427376 910.59516zM941.427376 910.59516"></path>
+        </g>
+    </symbol>
+</svg></div>
+        
+        
+    <div style="width:0px;height:0px;position:absolute;top:-999px;left:-999px;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="erroralert" width="1px" height="1px"><param name="AllowScriptAccess" value="always"><param name="movie" value="http://tongji.baidu.com/logstat.swf"><embed name="erroralert" width="1px" height="1px" allowscriptaccess="always" align="middle" src="http://tongji.baidu.com/logstat.swf" type="application/x-shockwave-flash"></object></div>
+
+
+</body></html>

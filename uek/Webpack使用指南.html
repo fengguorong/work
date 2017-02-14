@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#???webpack -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <title>Webpack使用指南</title>
+        <link rel="stylesheet" type="text/css" href="./Webpack使用指南_files/markdownbody.github.css">
+        <link rel="stylesheet" type="text/css" href="./Webpack使用指南_files/lhjs.github-gist.css">
+        <link rel="stylesheet" type="text/css" href="./Webpack使用指南_files/amWiki.css">
+    </head>
+
+    <body>
+        <!-- 头部 -->
+        <header class="header">
+        </header>
+        <!-- 页面 -->
+        <div class="container">
+            <div class="nav">
+                <div class="menu-filter">
+                    <svg>
+                        <use xlink:href="#icon:navFilter"></use>
+                    </svg>
+                    <input type="text" id="menuFilter" value="" placeholder="请输入筛选条件" title="请输入筛选条件">
+                    <i class="off" title="清空筛选">×</i>
+                </div>
+                <div class="menu-search" id="searchShow" title="全库搜索">
+                    <svg>
+                        <use xlink:href="#icon:search"></use>
+                    </svg>
+                </div>
+                <!--<div class="menu-fold" title="展开/折叠导航栏所有菜单">
+                    <svg>
+                        <use xlink:href="#navFolder1"></use>
+                    </svg>
+                </div>-->
+                <nav class="menubar" id="menuBar"><h4 id="-file-" class=""><svg><use xlink:href="#icon:navHome"></use></svg><a href="http://uekdev.coding.me/layout/?file=%E9%A6%96%E9%A1%B5" title="返回首页">首页</a></h4>
+<h5 id="html-css-"><svg><use xlink:href="#icon:navArrow"></use></svg>html、css初识</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/01-html%E7%AE%80%E4%BB%8B%E6%A0%87%E7%AD%BE" title="html简介标签">html简介标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont" title="css使用和font">css使用和font</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B" title="css盒子模型">css盒子模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/04-css%E6%B5%AE%E5%8A%A8" title="css浮动">css浮动</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/05-css%E5%AE%9A%E4%BD%8D" title="css定位">css定位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/06-css%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98" title="css兼容问题">css兼容问题</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/07-css%E8%A1%A5%E5%85%85%E5%B1%9E%E6%80%A7" title="css补充属性">css补充属性</a></li>
+</ul>
+<h5 id="html-css-"><svg><use xlink:href="#icon:navArrow"></use></svg>html、css进阶</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/01-html5%E7%AE%80%E4%BB%8B" title="html5简介">html5简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/010-css3%E9%A2%9C%E8%89%B2%E5%92%8C%E6%B8%90%E5%8F%98" title="css3颜色和渐变">css3颜色和渐变</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/011-css3%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2" title="css3用户界面">css3用户界面</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/012-css3%E6%96%87%E6%9C%AC%E6%A8%A1%E5%9E%8B" title="css3文本模型">css3文本模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/013-css3%202D%E8%BD%AC%E6%8D%A2" title="css3 2D转换">css3 2D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/014-css3%203D%E8%BD%AC%E6%8D%A2" title="css3 3D转换">css3 3D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/015-css3%E5%8A%A8%E7%94%BB" title="css3动画">css3动画</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/016-css3%E5%93%8D%E5%BA%94%E5%BC%8F" title="css3响应式">css3响应式</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/017-css3%E5%8D%95%E4%BD%8D" title="css3单位">css3单位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/018-css3%E5%90%84%E7%A7%8D%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8%E4%BB%8B%E7%BB%8D" title="css3各种浏览器内核介绍">css3各种浏览器内核介绍</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/02-html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE" title="html5语义化标签">html5语义化标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/03-html5%E8%A1%A8%E5%8D%95%E6%96%B0%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90" title="html5表单新功能解析">html5表单新功能解析</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg" title="html5可伸缩矢量图形svg">html5可伸缩矢量图形svg</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/05-css3%E7%AE%80%E4%BB%8B" title="css3简介">css3简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/06-css3%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8" title="css3新增选择器">css3新增选择器</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/07-css3%E8%BE%B9%E6%A1%86" title="css3边框">css3边框</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/08-css3%E8%83%8C%E6%99%AF" title="css3背景">css3背景</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/09-css3%E8%BF%87%E6%B8%A1%E5%80%92%E5%BD%B1" title="css3过渡倒影">css3过渡倒影</a></li>
+</ul>
+<h5 id="-"><svg><use xlink:href="#icon:navArrow"></use></svg>移动端布局</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" title="移动端环境搭建">移动端环境搭建</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/02-hack" title="hack">hack</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/03-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%A7%86%E5%8F%A3viewport" title="移动端视口viewport">移动端视口viewport</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/04-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E7%99%BE%E5%88%86%E6%AF%94%E3%80%81%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端布局之百分比、流式布局">移动端布局之百分比、流式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/05-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端的响应式布局">移动端的响应式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/06-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B" title="移动端布局之弹性盒模型">移动端布局之弹性盒模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/07-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8Brem" title="移动端布局之rem">移动端布局之rem</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/08-12%E7%A7%8D%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F" title="12种移动端常见布局方式">12种移动端常见布局方式</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/09-app%E5%88%86%E7%B1%BB" title="app分类">app分类</a></li>
+</ul>
+<h5 id="webpack" class="on"><svg><use xlink:href="#icon:navArrow"></use></svg>webpack</h5>
+<ul style="display: block;">
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97" title="Webpack使用指南" class="on">Webpack使用指南</a></li>
+</ul>
+</nav>
+            </div>
+            <div class="main" id="main">
+                <article class="markdown-body" id="view"><blockquote>
+<ol>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#什么是webpack" title="什么是webpack">什么是webpack</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#Webpack 的特点" title="Webpack 的特点">Webpack 的特点</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#开始使用" title="开始使用">开始使用</a><ol>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#安装" title="安装">安装</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#使用" title="使用">使用</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#Loader" title="Loader">Loader</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#配置文件" title="配置文件">配置文件</a></li>
+</ol>
+</li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#插件（Plugins）" title="插件（Plugins）">插件（Plugins）</a><ol>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#HtmlWebpackPlugin" title="HtmlWebpackPlugin">HtmlWebpackPlugin</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#ExtractTextPlugin" title="ExtractTextPlugin">ExtractTextPlugin</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#合并公共代码" title="合并公共代码">合并公共代码</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#代码压缩" title="代码压缩">代码压缩</a></li>
+</ol>
+</li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#其他用法" title="其他用法">其他用法</a><ol>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#缓存" title="缓存">缓存</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#去除多个文件中的频繁依赖" title="去除多个文件中的频繁依赖">去除多个文件中的频繁依赖</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#设置环境命令" title="设置环境命令">设置环境命令</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#常用命令" title="常用命令">常用命令</a></li>
+</ol>
+</li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#目录结构" title="目录结构">目录结构</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#使用webpack构建本地服务器" title="使用webpack构建本地服务器">使用webpack构建本地服务器</a></li>
+</ol>
+</blockquote>
+<h1 id="-webpack-http-zhaoda-net-webpack-handbook-module-system-html-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#Webpack使用指南" name="Webpack使用指南"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a><a href="http://zhaoda.net/webpack-handbook/module-system.html">Webpack使用指南</a></h1>
+<blockquote>
+<p>Webpack 是当下最热门的前端资源模块化管理和打包工具。</p>
+</blockquote>
+<h2 id="-webpack"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#什么是webpack" name="什么是webpack"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>什么是webpack</h2>
+<p>Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</p>
+<p><img src="./Webpack使用指南_files/what-is-webpack.png" alt=""></p>
+<h2 id="webpack-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#Webpack 的特点" name="Webpack 的特点"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>Webpack 的特点</h2>
+<p>Webpack 和其他模块化工具有什么区别呢？</p>
+<ul>
+<li>代码拆分<br>Webpack 有两种组织模块依赖的方式，同步和异步。异步依赖作为分割点，形成一个新的块。在优化了依赖树后，每一个异步区块都作为一个文件被打包。</li>
+<li>Loader<br>Webpack 本身只能处理原生的 JavaScript 模块，但是 loader 转换器可以将各种类型的资源转换成 JavaScript 模块。这样，任何资源都可以成为 Webpack 可以处理的模块。</li>
+<li>智能解析<br>Webpack 有一个智能解析器，几乎可以处理任何第三方库，无论它们的模块形式是 CommonJS、 AMD 还是普通的 JS 文件。甚至在加载依赖的时候，允许使用动态表达式 require("./templates/" + name + ".jade")。</li>
+<li>插件系统<br>Webpack 还有一个功能丰富的插件系统。大多数内容功能都是基于这个插件系统运行的，还可以开发和使用开源的 Webpack 插件，来满足各式各样的需求。</li>
+<li>快速运行<br>Webpack 使用异步 I/O 和多级缓存提高运行效率，这使得 Webpack 能够以令人难以置信的速度快速增量编译。</li>
+</ul>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#开始使用" name="开始使用"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>开始使用</h2>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#安装" name="安装"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>安装</h3>
+<p>首先要安装 Node.js， Node.js 自带了软件包管理器 npm，Webpack可以通过npm去安装。  </p>
+<p>用 npm 安装 Webpack：</p>
+<pre><code>$ npm install webpack -g
+</code></pre><p>此时 Webpack 已经安装到了全局环境下，可以通过命令行 webpack -h 试试。</p>
+<p>通常我们会将 Webpack 安装到项目的依赖中，这样就可以使用项目本地版本的 Webpack。</p>
+<pre><code># 进入项目目录
+# 确定已经有 package.json，没有就通过 npm init 创建
+# 安装 webpack 依赖
+$ npm install webpack --save-dev
+</code></pre><p>查看webpack</p>
+<pre><code># 查看 webpack 版本信息
+$ npm info webpack
+</code></pre><p>安装指定版本的 webpack</p>
+<pre><code>$ npm install webpack@1.12.x --save-dev
+</code></pre><p>如果需要使用 Webpack 开发工具，要单独安装：</p>
+<pre><code>$ npm install webpack-dev-server --save-dev
+</code></pre><h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#使用" name="使用"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>使用</h3>
+<p>首先创建一个静态页面 index.html 和一个 JS 入口文件 entry.js：</p>
+<pre><code>&lt;!-- index.html --&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script src="bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><pre><code>// entry.js
+document.write('It works.')
+</code></pre><p>然后编译 entry.js 并打包到 bundle.js：</p>
+<pre><code>$ webpack entry.js bundle.js
+</code></pre><p>打包过程会显示日志：</p>
+<pre><code>Hash: e964f90ec65eb2c29bb9
+Version: webpack 1.12.2
+Time: 54ms
+    Asset     Size  Chunks             Chunk Names
+bundle.js  1.42 kB       0  [emitted]  main
+   [0] ./entry.js 27 bytes {0} [built]
+</code></pre><p>用浏览器打开 index.html 将会看到 It works. 。
+接下来添加一个模块 module.js 并修改入口 entry.js：</p>
+<pre><code>// module.js
+module.exports = 'It works from module.js.'
+</code></pre><pre><code>// entry.js
+document.write('It works.')
+document.write(require('./module.js')) // 添加模块
+</code></pre><p>重新打包 webpack entry.js bundle.js 后刷新页面看到变化</p>
+<pre><code>It works.It works from module.js.
+Hash: 279c7601d5d08396e751
+Version: webpack 1.12.2
+Time: 63ms
+    Asset     Size  Chunks             Chunk Names
+bundle.js  1.57 kB       0  [emitted]  main
+   [0] ./entry.js 66 bytes {0} [built]
+   [1] ./module.js 43 bytes {0} [built]
+</code></pre><p>Webpack 会分析入口文件，解析包含依赖关系的各个文件。这些文件（模块）都打包到 bundle.js 。Webpack 会给每个模块分配一个唯一的 id 并通过这个 id 索引和访问模块。在页面启动时，会先执行 entry.js 中的代码，其它模块会在运行 require 的时候再执行。</p>
+<h3 id="loader"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#Loader" name="Loader"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>Loader</h3>
+<p>Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要使用 loader 进行转换。</p>
+<p>Loader 可以理解为是模块和资源的转换器，它本身是一个函数，接受源文件作为参数，返回转换的结果。这样，我们就可以通过 require 来加载任何类型的模块或文件，比如 CoffeeScript、 JSX、 LESS 或图片。</p>
+<p>先来看看 loader 有哪些特性？</p>
+<ul>
+<li>Loader 可以通过管道方式链式调用，每个 loader 可以把资源转换成任意格式并传递给下一个 loader ，但是最后一个 loader 必须返回 JavaScript。</li>
+<li>Loader 可以同步或异步执行。</li>
+<li>Loader 运行在 node.js 环境中，所以可以做任何可能的事情。</li>
+<li>Loader 可以接受参数，以此来传递配置项给 loader。</li>
+<li>Loader 可以通过文件扩展名（或正则表达式）绑定给不同类型的文件。</li>
+<li>Loader 可以通过 npm 发布和安装。</li>
+<li>除了通过 package.json 的 main 指定，通常的模块也可以导出一个 loader 来使用。</li>
+<li>Loader 可以访问配置。</li>
+<li>插件可以让 loader 拥有更多特性。</li>
+<li>Loader 可以分发出附加的任意文件。</li>
+</ul>
+<p>loader 一般以 <code>xxx-loader</code> 的方式命名，xxx 代表了这个 loader 要做的转换功能，比如 <code>json-loader</code>。</p>
+<p>Loader 可以在 require() 引用模块的时候添加，也可以在 webpack 全局配置中进行绑定，还可以通过命令行的方式使用。</p>
+<p>接上一节的例子，我们要在页面中引入一个 CSS 文件 style.css，首页将 style.css 也看成是一个模块，然后用 css-loader 来读取它，再用 style-loader 把它插入到页面中。</p>
+<pre><code>/* style.css */
+body { background: yellow; }
+</code></pre><p>修改 entry.js：</p>
+<pre><code>require("!style!css!./style.css") // 载入 style.css
+document.write('It works.')
+document.write(require('./module.js'))
+</code></pre><p>安装 loader：</p>
+<pre><code>npm install css-loader style-loader
+</code></pre><p>重新编译打包，刷新页面，就可以看到黄色的页面背景了。</p>
+<p>如果每次 require CSS 文件的时候都要写 loader 前缀，是一件很繁琐的事情。我们可以根据模块类型（扩展名）来自动绑定需要的 loader。  </p>
+<p>将 entry.js 中的 <code>require("!style!css!./style.css")</code> 修改为 <code>require("./style.css")</code> ，然后执行：</p>
+<pre><code>$ webpack entry.js bundle.js --module-bind 'css=style!css'
+</code></pre><pre><code># 有些环境下可能需要使用双引号
+$ webpack entry.js bundle.js --module-bind "css=style!css"
+</code></pre><p>显然，这两种使用 loader 的方式，效果是一样的。</p>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#配置文件" name="配置文件"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>配置文件</h3>
+<p>Webpack 在执行的时候，除了在命令行传入参数，还可以通过指定的配置文件来执行。默认情况下，会搜索当前目录的 webpack.config.js 文件，这个文件是一个 node.js 模块，返回一个 json 格式的配置信息对象，或者通过 --config 选项来指定配置文件。</p>
+<h4 id="-">示例</h4>
+<p>创建一个配置文件 webpack.config.js：</p>
+<pre><code>var webpack = require('webpack')
+
+module.exports = {
+  entry: './entry.js',
+  output: {
+    path: __dirname,
+    filename: 'bundle.js'
+  },
+  module: {
+    loaders: [
+      {test: /\.css$/, loader: 'style!css'}
+    ]
+  }
+}
+</code></pre><h4 id="webpack-config-js-">webpack.config.js参数详解</h4>
+<p>webpack.config.js文件通常放在项目的根目录中，它本身也是一个标准的Commonjs规范的模块。在导出的配置对象中有几个关键的参数：</p>
+<h4 id="entry">entry</h4>
+<p>entry参数定义了打包后的入口文件，有三种写法，每个入口称为一个chunk:</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>示例</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字符串</td>
+<td>entry: "./index/index.js"</td>
+<td>配置模块会被解析为模块，并在启动时加载。<br>chunk名为默认为main， 具体打包文件名视output配置而定。</td>
+</tr>
+<tr>
+<td>数组</td>
+<td>entry: ['./src/mod1.js', [...,] './src/index.js']</td>
+<td>所有的模块会在启动时 按照配置顺序 <br>加载，合并到最后一个模块会被导出。chunk名默认为main</td>
+</tr>
+<tr>
+<td>对象</td>
+<td>entry:{index: '...', login : [...]}</td>
+<td>如果传入<code>Object</code>,则会生成多个入口打包文件<br><code>key</code>是<code>chunk</code>名，<code>value</code>可以是字符串，也可是数组。</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    entry: {
+        page1: "./page1",
+
+        //支持数组形式，将加载数组中的所有模块，但以最后一个模块作为输出
+        page2: ["./entry1", "./entry2"]
+    },
+    output: {
+        path: "dist/js/page",
+        publicPath: "/output/",
+        filename: "[name].bundle.js"
+    }
+}
+</code></pre><p>该段代码最终会生成一个 page1.bundle.js 和 page2.bundle.js，并存放到 ./dist/js/page 文件夹下</p>
+<h4 id="output">output</h4>
+<p>output参数是个对象，定义了输出文件的位置及名字：</p>
+<pre><code>output: {
+        path: "dist/js/page",
+        publicPath: "/output/",
+        filename: "[name].bundle.js"
+    }
+</code></pre><ul>
+<li><strong>path</strong>: 打包文件存放的绝对路径   </li>
+<li><strong>publicPath</strong>: 网站运行时的访问路径</li>
+<li><strong>filename</strong>:打包后的文件名</li>
+</ul>
+<p>当我们在entry中定义构建多个文件时，filename可以对应的更改为[name].js用于定义不同文件构建后的名字。</p>
+<h4 id="module">module</h4>
+<p>在webpack中JavaScript，CSS，LESS，TypeScript，JSX，CoffeeScript，图片等静态文件都是模块，不同模块的加载是通过模块加载器（webpack-loader）来统一管理的。loaders之间是可以串联的，一个加载器的输出可以作为下一个加载器的输入，最终返回到JavaScript上：
+loader使用需要先安装再加入到配置下中。</p>
+<p>Loaders需要单独安装并且需要在webpack.config.js下的modules关键字下进行配置，Loaders的配置选项包括以下几方面：</p>
+<ul>
+<li>test：一个匹配loaders所处理的文件的拓展名的正则表达式（必须）</li>
+<li>loader：loader的名称（必须）</li>
+<li>include/exclude:手动添加必须处理的文件（文件夹）或屏蔽不需要处理的文件（文件夹）（可选）；</li>
+<li>query：为loaders提供额外的设置选项（可选）</li>
+</ul>
+<h5 id="loaders-">loaders之 预处理</h5>
+<ul>
+<li>css-loader 处理css中路径引用等问题</li>
+<li>style-loader 动态把样式写入css</li>
+<li>sass-loader scss编译器</li>
+<li>less-loader less编译器</li>
+<li>postcss-loader scss再处理 </li>
+</ul>
+<pre><code>module: {
+        //加载器配置
+        loaders: [
+            //.css 文件使用 style-loader 和 css-loader 来处理
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            //.less 文件使用 less-loader、cssloader来编译
+            { test:/\.less$/, loader: 'style!less'}
+            //.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
+            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+
+        ]
+    }
+</code></pre><h5 id="loaders-js-">loaders之 js处理</h5>
+<p>babel-loader <a href="http://babeljs.cn/">babel官网</a></p>
+<pre><code>// npm一次性安装多个依赖模块，模块之间用空格隔开
+npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
+</code></pre><pre><code>module: {
+  loaders: [
+    {
+        test:/\.jsx?$/,
+        exclude:/node_modules/,
+        loader:'babel',
+        query:{presets:['react','es2015']}
+    }
+  ]
+}
+</code></pre><h5 id="loaders-">loaders之 图片处理</h5>
+<ul>
+<li>url-loader</li>
+</ul>
+<pre><code>npm install --save-dev url-loadr
+</code></pre><pre><code>module: {
+  loaders: [
+    {
+      test: /\.(png|jpg|gif)$/,
+      loader: 'url-loader?limit=10000&amp;name=build/images/[name].[ext]'
+    }
+  ]
+}
+</code></pre><p>对于上面的配置，如果图片资源小于10kb就会转化成 base64 格式的 dataUrl，其他的图片会存放在build/images文件夹下。     </p>
+<h5 id="loaders-">loaders之 文件处理</h5>
+<ul>
+<li>file-loader </li>
+</ul>
+<pre><code>npm install --save-dev file-loader
+</code></pre><pre><code>module: {
+  loaders: [
+    {
+      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+      loader: 'file'
+      },
+  ]
+}
+</code></pre><h4 id="-">示例</h4>
+<pre><code>module: {
+        //加载器配置
+        loaders: [
+            //.css 文件使用 style-loader 和 css-loader 来处理
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+
+
+            //.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
+            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+
+            //图片文件使用 url-loader 来处理，小于8kb的直接转为base64
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+        ]
+    }
+</code></pre><h2 id="-plugins-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#插件（Plugins）" name="插件（Plugins）"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>插件（Plugins）</h2>
+<p>插件（Plugins）是用来拓展Webpack功能的，它们会在整个构建过程中生效，执行相关的任务。</p>
+<p>Webpack有很多内置插件，同时也有很多第三方插件，可以让我们完成更加丰富的功能。</p>
+<h4 id="-">使用插件的方法</h4>
+<p>要使用某个插件，我们需要通过npm安装它，然后要做的就是在webpack配置中的plugins关键字部分添加该插件的一个实例（plugins是一个数组）继续看例子，我们添加了一个实现版权声明的插件。</p>
+<pre><code>module.exports = {
+  plugins: [
+    new webpack.BannerPlugin("Copyright Nico inc.")
+    //在这个数组中new一个就可以了
+  ]
+}
+</code></pre><h3 id="htmlwebpackplugin"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#HtmlWebpackPlugin" name="HtmlWebpackPlugin"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>HtmlWebpackPlugin</h3>
+<p>这个插件的作用是依据一个简单的模板，帮你生成最终的HTML5文件，这个文件中自动引用了你打包后的JS文件。每次编译都在文件名中插入一个不同的哈希值。</p>
+<p>安装</p>
+<pre><code>npm install --save-dev html-webpack-plugin
+</code></pre><p>这个插件自动完成了我们之前手动做的一些事情，在正式使用之前需要对一直以来的项目结构做一些改变：</p>
+<p>在app目录下，创建一个Html文件模板，这个模板包含title等其它你需要的元素，在编译过程中，本插件会依据此模板生成最终的html页面，会自动添加所依赖的 css, js，favicon等文件，在本例中我们命名模板文件名称为index.tmpl.html，模板源代码如下</p>
+<p>index.tmpl.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Webpack&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id='box'&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>webpack.config.js</p>
+<pre><code>var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = {
+    plugins: [
+    new HtmlWebpackPlugin({
+      template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
+    })
+  ]
+}
+</code></pre><h3 id="extracttextplugin"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#ExtractTextPlugin" name="ExtractTextPlugin"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>ExtractTextPlugin</h3>
+<p>分离CSS和JS文件</p>
+<p>安装</p>
+<pre><code>npm install --save-dev extract-text-webpack-plugin
+</code></pre><p>webpack.config.js</p>
+<pre><code>var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+    ...
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: __dirname + "/app/index.tmpl.html"
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new ExtractTextPlugin("style.css")
+  ]
+}
+</code></pre><h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#合并公共代码" name="合并公共代码"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>合并公共代码</h3>
+<p>项目中，对于一些常用的组件，站点公用模块经常需要与其他逻辑分开，然后合并到同一个文件，以便于长时间的缓存。要实现这一功能，配置参照:</p>
+<pre><code>var webpack = require('webpack');
+var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+
+···
+entry: {
+   a: './index/a.js',
+   b: './idnex/b.js',
+   c: './index/c.js',
+   d: './index/d.js'
+},
+···
+plugins: [
+   new CommonsChunkPlugin('part.js', ['a', 'b']),
+   new CommonsChunkPlugin('common.js', ['part1', 'c'])
+]
+···
+</code></pre><h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#代码压缩" name="代码压缩"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>代码压缩</h3>
+<p>webpack 自带了一个压缩插件 UglifyJsPlugin，只需要在配置文件中引入即可。</p>
+<pre><code>{
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ]
+}
+</code></pre><p>加入了这个插件之后，编译的速度会明显变慢，所以一般只在生产环境启用。</p>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#其他用法" name="其他用法"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>其他用法</h2>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#缓存" name="缓存"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>缓存</h3>
+<p>缓存无处不在，使用缓存的最好方法是保证你的文件名和文件内容是匹配的（内容改变，名称相应改变）
+webpack可以把一个哈希值添加到打包的文件名中，使用方法如下,添加特殊的字符串混合体（[name], [id] and [hash]）到输出文件名前</p>
+<pre><code>var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = {
+  entry: __dirname + "/app/main.js",
+  output: {
+    path: __dirname + "/build",
+    filename: "[name]-[hash].js"
+  },
+  module: {},
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: __dirname + "/app/index.tmpl.html"
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new ExtractTextPlugin("[name]-[hash].css")
+  ]
+}
+</code></pre><h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#去除多个文件中的频繁依赖" name="去除多个文件中的频繁依赖"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>去除多个文件中的频繁依赖</h3>
+<p>当我们经常使用React、jQuery等外部第三方库的时候，通常在每个业务逻辑JS中都会遇到这些库。 
+如我们需要在各个文件中都是有jQuery的$对象，因此我们需要在每个用到jQuery的JS文件的头部通过require('jquery')来依赖jQuery。 这样做非常繁琐且重复，因此webpack提供了我们一种比较高效的方法，我们可以通过在配置文件中配置使用到的变量名，那么webpack会自动分析，并且在编译时帮我们完成这些依赖的引入。</p>
+<p>webpack.config.js中</p>
+<pre><code>var webpack = require('webpack');
+
+...
+plugins: [
+   new webpack.ProvidePlugin({
+       'Moment': 'moment',
+       "$": "jquery",
+       "jQuery": "jquery",
+       "window.jQuery": "jquery",
+       "React": "react"
+   })
+]
+...
+</code></pre><h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#设置环境命令" name="设置环境命令"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>设置环境命令</h3>
+<p>要告诉webpack我们希望当前是什么环境，只需要在命令中写入 BUILD_DEV=1 webpck 那么webpack通过配置，就会将所有我们引用到的<strong>DEV</strong>变量设置为true。</p>
+<p>我们可以在package.json中事先定义好命令：</p>
+<pre><code>"scripts": {
+    "dev": "BUILD_DEV=1 webpack-dev-server --progress --colors",
+    "build": "BUILD_PRERELEASE=1 webpack -p"
+}
+</code></pre><p>那么就可以避免输入冗长的命令了：</p>
+<p>开发时输入：</p>
+<pre><code>npm run dev
+</code></pre><p>发布时输入:</p>
+<pre><code>npm run build
+</code></pre><h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#常用命令" name="常用命令"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>常用命令</h3>
+<p> webpack的使用和browserify有些类似，下面列举几个常用命令：</p>
+<pre><code>webpack 最基本的启动webpack命令
+webpack -w 提供watch方法，实时进行打包更新
+webpack -p 对打包后的文件进行压缩
+webpack -d 提供SourceMaps，方便调试
+webpack --colors 输出结果带彩色，比如：会用红色显示耗时较长的步骤
+webpack --profile 输出性能数据，可以看到每一步的耗时
+webpack --display-modules 默认情况下 node_modules 下的模块会被隐藏，加上这个参数可以显示这些被隐藏的模块
+</code></pre><h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#目录结构" name="目录结构"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>目录结构</h2>
+<pre><code>/
+ ├── shell/ 脚本
+ │
+ ├── conf/ 工程配置
+ │
+ ├── src/ 开发目录
+ │      ├── components/ 组件
+ │      ├── pages/ 页面
+ │      ├──
+ ├── dist/ 自动生成
+ │
+ ├── test/ 测试
+ │
+ ├── node_modules/ 自动生成，包含.Node 依赖以及开发依赖
+ │
+ ├── static/ 库文件等，不会被webpack的loader处理,手动管理
+ │
+ └── etc
+</code></pre><p>完整的目录结构：</p>
+<pre><code>projectTemplate/  
+    ├── shell/    node脚本    
+    │    ├──
+    │    ├── dev-server.js  本地开发服务器
+    │    ├── build.js  打包脚本
+    │    ├── utils.js  工具函数
+    │    ├──        
+    ├── conf/     工程配置  
+    │    ├──
+    │    ├── index.js  基础配置文件，在此可简单的修改webpack相关配置
+    │    ├── webpack.base.js  webpack的基础配置，主要是loader、resolve的配置
+    │    ├── webpack.dev.js  webpack开发配置，主要是eslint、livereload、hot module replacement及相关的插件
+    │    ├── webpack.prod.js  webpack生产配置，主要是代码的压缩混淆，图片压缩，加hash
+    │    ├── karma.conf.js  测试配置
+    │    ├──
+    ├── src/   开发目录
+    │     ├── components/   组件
+    │     ├── pages/        页面（页面下的项目目录需要遵循一定的规范以便创建webpack的入口文件，不过这些规范是可以调整的；以下只是推荐）
+    │           ├── index/   首页
+    │                ├── images/  图片资源
+    │                ├── page.css 样式文件，文件名称可以按照自己意愿命名
+    │                ├── page.js  脚本文件及webpack的入口文件，文件名称可以在/conf/index.js配置
+    │                ├── template.html 模板文件及要撰写的html文件，文件名称可以在/conf/index.js配置
+    │                ├──
+    │              
+    ├── dist/      自动生成
+    │      
+    ├── test/      测试（目录可以意愿来创建，但是测试文件名称必须遵循*_test.js的命名规范，可在/conf/karma.conf.js修改配置）
+    │  
+    ├── node_modules/     自动生成，包含node依赖以及开发依赖
+    │  
+    ├── static/           库文件等，不会被webpack的loader处理,手动管理
+    │     
+    └── etc
+</code></pre><h2 id="-webpack-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#使用webpack构建本地服务器" name="使用webpack构建本地服务器"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>使用webpack构建本地服务器</h2>
+<p>想不想让你的浏览器监测你都代码的修改，并自动刷新修改后的结果，其实Webpack提供一个可选的本地开发服务器，这个本地服务器基于node.js构建，可以实现你想要的这些功能，不过它是一个单独的组件，在webpack中进行配置之前需要单独安装它作为项目依赖</p>
+<pre><code>npm install --save-dev webpack-dev-server
+</code></pre><p>devserver作为webpack配置选项中的一项，具有以下配置选项</p>
+<table>
+<thead>
+<tr>
+<th>devserver配置选项</th>
+<th style="text-align:left">功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentBase</td>
+<td style="text-align:left">默认webpack-dev-server会为根文件夹提供本地服务器，<br>如果想为另外一个目录下的文件提供本地服务器，<br>应该在这里设置其所在目录（本例设置到“public"目录）</td>
+</tr>
+<tr>
+<td>port</td>
+<td style="text-align:left">设置默认监听端口，如果省略，默认为”8080“</td>
+</tr>
+<tr>
+<td>inline</td>
+<td style="text-align:left">设置为true，当源文件改变时会自动刷新页面</td>
+</tr>
+<tr>
+<td>colors</td>
+<td style="text-align:left">设置为true，使终端输出的文件为彩色的</td>
+</tr>
+<tr>
+<td>historyApiFallback</td>
+<td style="text-align:left">在开发单页应用时非常有用，它依赖于HTML5 history API，<br>如果设置为true，所有的跳转将指向index.html</td>
+</tr>
+</tbody>
+</table>
+<p>如下配置：</p>
+<pre><code>module.exports = {
+    ...
+    devServer: {
+    contentBase: "./public",//本地服务器所加载的页面所在的目录
+    colors: true,//终端中输出结果为彩色
+    historyApiFallback: true,//不跳转
+    inline: true//实时刷新
+  }
+}
+</code></pre></article>
+                <!-- 上下翻页 -->
+                <div class="main-sibling on" id="mainSibling">
+                    <p><span>上一篇：</span>
+                        <a>没有了</a>
+                    </p>
+                    <p><span>下一篇：</span>
+                        <a>没有了</a>
+                    </p>
+                </div>
+                <!-- 全库搜索 -->
+                <div class="search-box" id="searchBox">
+                    <div class="search-update">
+                        <input type="button" id="searchUpdate" value="更新所有缓存">
+                        <div class="text">
+                            <p>上次完全更新：<time id="cacheLasttime">0000-00-00 00:00:00</time></p>
+                            <p>文档总数：<b id="cacheDocTotal">36</b> / <span>已缓存：<i id="cacheState">36%</i></span></p>
+                        </div>
+                    </div>
+                    <h2>全库搜索</h2>
+                    <div class="search-input">
+                        <input type="text" id="searchText" placeholder="请输入搜索内容">
+                        <input type="button" id="search" value="搜 索">
+                    </div>
+                    <div class="search-results" id="results">
+                        <div class="search-result-message" id="resultMsg"></div>
+                        <ul class="search-list"></ul>
+                        <div class="search-result-more" id="resultMore">显示更多</div>
+                        <script id="template:searchResult" type="text/html">
+                            <li class="search-item">
+                                <a href="?file={{path}}">
+                                    <div class="content">
+                                        <strong>{{title}}</strong>
+                                        {{api}}
+                                        {{content}}
+                                    </div>
+                                    <div class="bottom">
+                                        <p>位置：<span>{{path}}</span></p>
+                                        <div class="time">最后缓存于
+                                            <time>{{time}}</time>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </script>
+                    </div>
+                </div>
+                <!-- 接口测试 -->
+
+            </div>
+        </div>
+        <!-- 签名 -->
+        <footer>
+            <div class="signature">Powered by
+                <a href="https://github.com/TevinLi/amWiki" target="_blank">amWiki</a>
+            </div>
+        </footer>
+        <!-- 返回顶部 -->
+        <aside>
+            <div class="back-top">
+                <a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#" class="back-icon">
+                    <svg>
+                        <use xlink:href="#backTop"></use>
+                    </svg>
+                </a>
+                <a href="http://uekdev.coding.me/layout/?file=004-webpack/001-Webpack%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#" class="back-text">返回顶部</a>
+            </div>
+        </aside>
+        <!-- js -->
+        <div class="hidden">
+            <script type="text/javascript" src="./Webpack使用指南_files/gbk.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/jquery-compat-3.1.0.min.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/marked.min.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/highlight.min.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/raphael-min.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/flowchart.min.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/amWiki.tools.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/amWiki.storage.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/amWiki.search.js.下载"></script>
+            <script type="text/javascript" src="./Webpack使用指南_files/amWiki.docs.js.下载"></script>
+
+            <script type="text/javascript" src="./Webpack使用指南_files/amWiki.js.下载"></script>
+        </div>
+        <!-- svg -->
+        <div class="hidden" id="svgSymbols"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="icon:navHome" viewBox="0 0 32 32" style="fill:currentColor">
+        <path d="m16 0l-16 16h4v16h24v-16h4l-16-16zm8 28h-6v-6h-4v6h-6v-14l8-6 8 5.7v14z"></path>
+    </symbol>
+    <symbol id="icon:navFilter" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M400.627447 927.694607c-25.929556 0-46.966685-21.037129-46.966685-46.966685L353.660762 542.308283 74.339102 172.687014c-11.313673-14.065344-13.514805-33.45188-5.748934-49.719378 7.828292-16.267499 24.339338-26.663266 42.380226-26.663266l801.437042 0c17.673521 0 33.879622 9.968026 41.891086 25.746384s6.482645 34.736129-3.975545 48.985668L669.540036 541.14683l0 211.700563c0 25.929556-21.037129 46.966685-46.966685 46.966685-25.929556 0-46.966685-21.037129-46.966685-46.966685L575.606667 525.796214c0-9.968026 3.180436-19.691481 9.051143-27.764344l235.101529-307.793108L208.94173 190.238762l228.317009 306.142515c6.665817 8.317433 10.335393 18.7132 10.335393 29.41596l0 354.931708C447.594131 906.657478 426.557002 927.694607 400.627447 927.694607z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navArrow" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M959.391517 255.877715 511.696078 703.573153 64.00064 255.877715Z"></path>
+        </g>
+    </symbol>
+    <symbol id="backTop" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M849.513502 524.698207l-308.405045-310.430168c-6.833639-6.867408-15.761985-10.1645-24.656563-10.095939-1.201361-0.103354-2.231831-0.686638-3.432169-0.686638-5.015224 0-9.68457 1.167592-13.978363 3.090385-4.325515 1.647523-8.445346 4.155646-11.948123 7.658424l-278.290167 277.807167c-13.426801 13.392008-13.46057 35.130102-0.034792 48.556902 6.695492 6.729262 15.487739 10.096962 24.312732 10.096962 8.7902 0 17.546631-3.367701 24.27794-10.028401l221.320665-220.97581 0 604.927459c0 18.99154 15.384385 34.340109 34.340109 34.340109 18.952654 0 34.340109-15.34857 34.340109-34.340109L547.359834 318.007751l253.460666 255.111259c6.696516 6.730285 15.557324 10.129708 24.347524 10.129708s17.512862-3.331885 24.208355-9.994632C862.872764 559.897893 862.90551 538.123984 849.513502 524.698207zM890.757858 134.805242 135.282614 134.805242c-18.954701 0-34.340109-15.384385-34.340109-34.340109s15.384385-34.340109 34.340109-34.340109l755.475244 0c18.98847 0 34.339086 15.384385 34.339086 34.340109S909.745305 134.805242 890.757858 134.805242z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navStart" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M102.548584 218.264049l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 461.299271l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 704.334493l818.644959 0 0 102.33062-818.644959 0 0-102.33062Z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navClose" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M588.99845 509.618605l412.775194-412.775194c19.051163-19.051163 19.051163-57.153488 0-82.555039-19.051163-19.051163-57.153488-19.051163-82.555039 0L512.793798 427.063566 100.018605 20.63876c-19.051163-19.051163-57.153488-19.051163-82.555039 0-19.051163 19.051163-19.051163 57.153488 0 82.555039L430.23876 509.618605l-412.775194 412.775194c-19.051163 19.051163-19.051163 57.153488 0 82.555039C30.164341 1011.299225 49.215504 1017.649612 61.916279 1017.649612s31.751938-6.350388 38.102326-19.051163L512.793798 592.173643l412.775194 412.775194c12.700775 12.700775 25.40155 19.051163 38.102326 19.051163 12.700775 0 31.751938-6.350388 38.102326-19.051163 19.051163-19.051163 19.051163-57.153488 0-82.555039L588.99845 509.618605z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder1" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M853.333333 260.352 512 260.352 512 192c0-35.328-28.672-64-64-64L170.666667 128c-47.104 0-85.333333 38.229333-85.333333 85.333333l0 132.352L85.333333 810.666667l0 0.085333c0 46.933333 38.4 85.333333 85.333333 85.333333l682.666667 0c46.933333 0 85.333333-38.4 85.333333-85.333333l0-465.066667C938.666667 298.752 900.266667 260.352 853.333333 260.352zM874.666667 789.418667c0 23.466667-19.2 42.666667-42.666667 42.666667L192 832.085333c-23.466667 0-42.666667-19.2-42.666667-42.666667l0-422.4L149.333333 263.082667 149.333333 234.666667c0-23.552 19.114667-42.666667 42.666667-42.666667l213.333333 0c23.552 0 42.666667 19.114667 42.666667 42.666667l0 89.685333 384 0c23.466667 0 42.666667 19.2 42.666667 42.666667L874.666667 789.418667z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder2" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M950.048 530.016c0-12-10.016-18.016-28-18.016l-580 0c-14.016 0-30.016 4-46.016 12s-30.016 16-38.016 28l-158.016 194.016c-6.016 8-8 14.016-8 20 0 12 8 20 28 20l580 0c14.016 0 30.016-4 46.016-12s28-18.016 38.016-28l156-194.016c6.016-8 10.016-16 10.016-22.016zM342.048 444l408 0 0-86.016c0-14.016-4-26.016-14.016-36s-22.016-14.016-36-14.016l-308 0c-14.016 0-26.016-6.016-36-16s-14.016-22.016-14.016-36l0-34.016c0-14.016-6.016-26.016-16-36s-22.016-16-36-16l-170.016 0c-14.016 0-26.016 6.016-36 16s-16 22.016-16 36l0 454.016 136-168c16-18.016 38.016-34.016 62.016-46.016 26.016-12 52-18.016 76-18.016zM1018.048 530.016c0 22.016-8 44-24 64l-158.016 194.016c-16 20-36 34.016-62.016 46.016-26.016 14.016-50.016 20-74.016 20l-580 0c-34.016 0-62.016-12-84-36-24-24-36-52-36-84l0-512c0-32 12-60 36-84 22.016-24 50.016-36 84-36l170.016 0c32 0 60 12 84 36s36 52 36 84l0 16 290.016 0c32 0 60 12 84 36s36 52 36 84l0 86.016 102.016 0c18.016 0 36 4 52 12 16 10.016 28 22.016 36 38.016 6.016 12 8 24 8 36z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:linkAnchor" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M616.601336 477.134935c0-96.148827-76.528977-174.34477-170.628122-174.34477l-138.339742 0.027629c-98.788957 0.007163-179.177845 78.195943-179.177845 174.330444l0.017396 69.698408c-0.024559 96.15292 80.406285 174.359097 179.205475 174.359097l38.696324 0.00307c19.815301-0.024559 35.851533-15.624862 35.848463-34.882462 0.00307-19.250436-16.032138-34.853809-35.823903-34.853809l-38.749536 0c-59.268872-0.007163-109.451808-46.925752-109.465111-104.604406l0-69.733201c0-57.668421 50.154283-104.58394 109.462041-104.594173l138.329509-0.024559c56.472176 0.024559 100.867292 46.911426 100.890828 104.618732l1.496074 34.872229c0 9.627265 3.810792 18.365276 9.969049 24.65554 6.178723 6.310729 14.728446 10.209526 24.153096 10.206456 18.84623 0.00307 34.118052-15.600303 34.118052-34.860972L616.601336 477.134935zM895.526977 477.152331c0.024559-96.148827-80.406285-174.355003-179.205475-174.359097l-38.696324-0.00307c-19.815301 0.024559-35.851533 15.627932-35.851533 34.882462 0 19.254529 16.036231 34.853809 35.826973 34.857902l38.745443 0c59.268872 0.00307 109.451808 46.922682 109.469204 104.604406l0 69.733201c0 57.668421-50.154283 104.58394-109.462041 104.591103l-138.329509 0.027629c-56.472176-0.024559-100.867292-46.911426-100.890828-104.618732l-1.496074-34.872229c0-9.630335-3.810792-18.365276-9.969049-24.65554-6.181793-6.314823-14.728446-10.209526-24.153096-10.205433-18.84623-0.007163-34.119075 15.600303-34.119075 34.860972l0 34.872229c0 96.145757 76.532047 174.340677 170.631192 174.340677l138.339742-0.024559c98.788957-0.007163 179.177845-78.199013 179.173752-174.330444L895.526977 477.152331z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:loading" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M955.733333 765.866667c0 0 0 2.133333 0 2.133333-12.8 21.333333-38.4 27.733333-57.6 14.933333-19.2-10.666667-27.733333-36.266667-17.066667-57.6l0 0c36.266667-64 57.6-136.533333 57.6-213.333333s-21.333333-151.466667-57.6-213.333333l0 0c-10.666667-19.2-4.266667-44.8 17.066667-57.6 21.333333-12.8 46.933333-4.266667 57.6 14.933333 0 0 0 2.133333 0 2.133333 42.666667 74.666667 68.266667 162.133333 68.266667 253.866667S998.4 691.2 955.733333 765.866667zM768 955.733333C768 955.733333 765.866667 955.733333 768 955.733333c-76.8 42.666667-164.266667 68.266667-256 68.266667s-179.2-25.6-253.866667-68.266667c0 0-2.133333 0-2.133333 0-21.333333-12.8-27.733333-38.4-14.933333-57.6 12.8-21.333333 38.4-27.733333 57.6-14.933333 0 0 0 0 2.133333 0l0 0C362.666667 917.333333 435.2 938.666667 512 938.666667s149.333333-21.333333 211.2-57.6l0 0c0 0 0 0 2.133333 0 21.333333-12.8 46.933333-4.266667 57.6 14.933333C795.733333 917.333333 789.333333 942.933333 768 955.733333zM727.466667 142.933333 727.466667 142.933333C663.466667 106.666667 590.933333 85.333333 512 85.333333s-151.466667 21.333333-213.333333 57.6l0 0c-19.2 10.666667-44.8 4.266667-57.6-17.066667C228.266667 106.666667 234.666667 81.066667 256 68.266667c0 0 2.133333 0 2.133333 0C332.8 25.6 420.266667 0 512 0s179.2 25.6 253.866667 68.266667c0 0 2.133333 0 2.133333 0 21.333333 12.8 27.733333 38.4 14.933333 57.6C772.266667 147.2 746.666667 153.6 727.466667 142.933333zM125.866667 782.933333C106.666667 795.733333 81.066667 789.333333 68.266667 768c0 0 0-2.133333 0-2.133333C25.6 691.2 0 603.733333 0 512s25.6-179.2 68.266667-253.866667c0 0 0-2.133333 0-2.133333 12.8-21.333333 38.4-27.733333 57.6-14.933333 21.333333 12.8 27.733333 38.4 14.933333 57.6 0 0 0 0 0 2.133333l0 0C106.666667 362.666667 85.333333 435.2 85.333333 512s21.333333 149.333333 57.6 211.2l0 0c0 0 0 0 0 2.133333C153.6 746.666667 147.2 772.266667 125.866667 782.933333z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:search" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M941.427376 910.59516c-16.080234 16.010649-69.712735 18.382673-85.792968 2.378164L631.709429 684.444491c61.748343-50.087768 70.796416-148.074454 70.796416-199.626573 0-148.759045-109.305475-260.410961-257.868045-260.410961-148.56871 0-256.612449 109.908202-256.612449 258.673387 0 148.752906 102.096283 261.730003 250.664993 261.730003 30.759561 0 44.760436 0.037862 72.293513-9.466606l0.38681 1.483794c7.000438-3.544733 77.435627-12.098549 77.435627 60.962443 0 20.455891-15.623839 41.425482-34.932604 48.178279-32.66905 11.420097-75.431993 16.936741-108.60144 16.936741-211.592093 0-381.180536-169.367409-381.180536-380.807029 0-211.370035 169.589466-382.79122 381.180536-382.79122 211.667817 0 381.180536 171.421184 381.180536 382.79122 0 65.812915-12.979616 127.682008-40.201607 179.176822l157.154249 159.189605C959.423239 836.475046 957.439048 894.660236 941.427376 910.59516L941.427376 910.59516zM941.427376 910.59516"></path>
+        </g>
+    </symbol>
+</svg></div>
+        
+        
+    
+
+
+</body></html>

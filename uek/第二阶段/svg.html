@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0150)http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <title>svg</title>
+        <link rel="stylesheet" type="text/css" href="./svg_files/markdownbody.github.css">
+        <link rel="stylesheet" type="text/css" href="./svg_files/lhjs.github-gist.css">
+        <link rel="stylesheet" type="text/css" href="./svg_files/amWiki.css">
+    </head>
+
+    <body>
+        <!-- 头部 -->
+        <header class="header">
+        </header>
+        <!-- 页面 -->
+        <div class="container">
+            <div class="nav">
+                <div class="menu-filter">
+                    <svg>
+                        <use xlink:href="#icon:navFilter"></use>
+                    </svg>
+                    <input type="text" id="menuFilter" value="" placeholder="请输入筛选条件" title="请输入筛选条件">
+                    <i class="off" title="清空筛选">×</i>
+                </div>
+                <div class="menu-search" id="searchShow" title="全库搜索">
+                    <svg>
+                        <use xlink:href="#icon:search"></use>
+                    </svg>
+                </div>
+                <!--<div class="menu-fold" title="展开/折叠导航栏所有菜单">
+                    <svg>
+                        <use xlink:href="#navFolder1"></use>
+                    </svg>
+                </div>-->
+                <nav class="menubar" id="menuBar"><h4 id="-file-" class=""><svg><use xlink:href="#icon:navHome"></use></svg><a href="http://uekdev.coding.me/layout/?file=%E9%A6%96%E9%A1%B5" title="返回首页">首页</a></h4>
+<h5 id="html-css-" class=""><svg><use xlink:href="#icon:navArrow"></use></svg>html、css初识</h5>
+<ul style="display: none;">
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/01-html%E7%AE%80%E4%BB%8B%E6%A0%87%E7%AD%BE" title="html简介标签" class="">html简介标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont" title="css使用和font" class="">css使用和font</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B" title="css盒子模型" class="">css盒子模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/04-css%E6%B5%AE%E5%8A%A8" title="css浮动" class="">css浮动</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/05-css%E5%AE%9A%E4%BD%8D" title="css定位" class="">css定位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/06-css%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98" title="css兼容问题" class="">css兼容问题</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/07-css%E8%A1%A5%E5%85%85%E5%B1%9E%E6%80%A7" title="css补充属性" class="">css补充属性</a></li>
+</ul>
+<h5 id="html-css-" class="on"><svg><use xlink:href="#icon:navArrow"></use></svg>html、css进阶</h5>
+<ul style="display: block;">
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/01-html5%E7%AE%80%E4%BB%8B" title="html5简介" class="">html5简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/010-css3%E9%A2%9C%E8%89%B2%E5%92%8C%E6%B8%90%E5%8F%98" title="css3颜色和渐变" class="">css3颜色和渐变</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/011-css3%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2" title="css3用户界面" class="">css3用户界面</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/012-css3%E6%96%87%E6%9C%AC%E6%A8%A1%E5%9E%8B" title="css3文本模型" class="">css3文本模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/013-css3%202D%E8%BD%AC%E6%8D%A2" title="css3 2D转换" class="">css3 2D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/014-css3%203D%E8%BD%AC%E6%8D%A2" title="css3 3D转换" class="">css3 3D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/015-css3%E5%8A%A8%E7%94%BB" title="css3动画" class="">css3动画</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/016-css3%E5%93%8D%E5%BA%94%E5%BC%8F" title="css3响应式" class="">css3响应式</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/017-css3%E5%8D%95%E4%BD%8D" title="css3单位" class="">css3单位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/018-css3%E5%90%84%E7%A7%8D%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8%E4%BB%8B%E7%BB%8D" title="css3各种浏览器内核介绍" class="">css3各种浏览器内核介绍</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/02-html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE" title="html5语义化标签" class="">html5语义化标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/03-html5%E8%A1%A8%E5%8D%95%E6%96%B0%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90" title="html5表单新功能解析" class="">html5表单新功能解析</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg" title="html5可伸缩矢量图形svg" class="on">html5可伸缩矢量图形svg</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/05-css3%E7%AE%80%E4%BB%8B" title="css3简介">css3简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/06-css3%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8" title="css3新增选择器">css3新增选择器</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/07-css3%E8%BE%B9%E6%A1%86" title="css3边框">css3边框</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/08-css3%E8%83%8C%E6%99%AF" title="css3背景">css3背景</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/09-css3%E8%BF%87%E6%B8%A1%E5%80%92%E5%BD%B1" title="css3过渡倒影">css3过渡倒影</a></li>
+</ul>
+<h5 id="-"><svg><use xlink:href="#icon:navArrow"></use></svg>移动端布局</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" title="移动端环境搭建">移动端环境搭建</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/02-hack" title="hack">hack</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/03-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%A7%86%E5%8F%A3viewport" title="移动端视口viewport">移动端视口viewport</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/04-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E7%99%BE%E5%88%86%E6%AF%94%E3%80%81%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端布局之百分比、流式布局">移动端布局之百分比、流式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/05-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端的响应式布局">移动端的响应式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/06-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B" title="移动端布局之弹性盒模型">移动端布局之弹性盒模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/07-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8Brem" title="移动端布局之rem">移动端布局之rem</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/08-12%E7%A7%8D%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F" title="12种移动端常见布局方式">12种移动端常见布局方式</a></li>
+</ul>
+</nav>
+            </div>
+            <div class="main" id="main">
+                <article class="markdown-body" id="view"><h1 id="svg"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#svg" name="svg"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>svg</h1>
+<h2 id="svg-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#SVG 简介" name="SVG 简介"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>SVG 简介</h2>
+<ul>
+<li>可缩放矢量图形（Scalable Vector Graphics，SVG）是基于可扩展标记语言（XML），用于描述二维矢量图形的一种图形格式。SVG由W3C制定，是一个开放标准。SVG是一种矢量图格式。</li>
+<li>在 2003 年1月，SVG 1.1 被确立为 W3C 标准。参与定义 SVG 的组织有：Adobe、苹果、Auto Desk、Bit Flash、Corel、惠普、IBM、ILOG、INSO、Macromedia、微软、Netscape、OASIS、Open Text、Quark、RAL(CCLRC)、Sun、Visio、施乐等，所以SVG不是一个私有格式，而是一个开放的标准。也就是说，它并不属于任何个体的专利，而是一个通过协作、共同开发的工业标准。正是因为这点，才使得SVG能够得到更迅速的开发和应用。</li>
+</ul>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#优势" name="优势"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>优势</h2>
+<ul>
+<li>SVG 可被非常多的工具读取和修改（比如记事本），支持多种滤镜和特殊效果，在不改变图像内容的前提下可以实现位图格式中类似文字阴影的效果，易于修改和编辑。</li>
+<li>SVG 与 JPEG 和 GIF 图像比起来，尺寸更小，且可压缩性更强。</li>
+<li>SVG 是可伸缩的</li>
+<li>SVG 图像可在任何的分辨率下被高质量地打印</li>
+<li>SVG 可在图像质量不下降的情况下被放大</li>
+<li>SVG可以方便的建立文字索引，从而实现基于内容的图像搜索，图像中的文本是可选的，同时也是可搜索的（很适合制作地图）。</li>
+<li>SVG 可与现有技术可以互动融合。例如，SVG技术本身的动态部分（包括时序控制和动画）就是基于SMIL标准。另</li>
+<li>SVG文件还可嵌入JavaScript（严格的说应该是ECMA Script)脚本来控制SVG对象，还可以与 Java 技术一起运行</li>
+<li>SVG 文件是纯粹的 XML。</li>
+<li>SVG 图形格式可以用来动态生成图形。例如，可用SVG动态生成具有交互功能的地图，嵌入网页中，并显示给终端用户</li>
+</ul>
+<p>SVG的出现带来了一次技术革命。利用SVG能够创建更加丰富多彩的信息可视化和交互性的应用，尤其是可以创建具有动态的、数据驱动的、交互式图形、图像。另外，由于是纯文本格式的．SVG比传统的图形、图像格式如GIF和JPEG占用更少的空间。因此，SVG更加适合有线带宽，并可提高下载速度。SVG和XML的开放式标准特性使其成为国际性语言。SVG标准得到了IBM、Adobe、Microsoft、Corel等几十家大公司的支持，其最新的版本是SVG 1.2。
+总之，SVG技术的出现，变革了在Web上图文传递信息的方式，并将产生一种更适于Web信息发布的工作流模式，其中包括Web信息显示和印刷出版的组织方式。</p>
+<h2 id="svg-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#SVG 实例" name="SVG 实例"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>SVG 实例</h2>
+<pre><code class="lang-html hljs xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> standalone=<span class="hljs-string">"no"</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-meta">&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100%"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"100%"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span>
+<span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"40"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"black"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"red"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+</code></pre>
+<blockquote>
+<ul>
+<li>第一行包含了 XML 声明。请注意 standalone 属性！该属性规定此 SVG 文件是否是“独立的”，或含有对外部文件的引用。standalone="no" 意味着 SVG 文档会引用一个外部文件 - 在这里，是 DTD 文件。</li>
+<li>第二和第三行引用了这个外部的 SVG DTD。该 DTD 于"<a href="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%E8%AF%A5">http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"该</a> DTD 位于 W3C,含有所有允许的 SVG 元素。SVG 代码以 <code>&lt;svg&gt;</code> 元素开始，包括开启标签 <code>&lt;svg&gt;</code> 和关闭标签 <code>&lt;/svg&gt;</code> 。这是根元素。</li>
+<li>width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。</li>
+<li>SVG 的 <code>&lt;circle&gt;</code> 用来创建一个圆。cx 和 cy 属性定义圆中心的 x 和 y 坐标。如果忽略这两个属性，那么圆点会被设置为 (0, 0)。r 属性定义圆的半径。</li>
+<li>stroke 和 stroke-width 属性控制如何显示形状的轮廓。我们把圆的轮廓设置为 2px 宽，黑边框。</li>
+<li>fill 属性设置形状内的颜色。我们把填充颜色设置为红色。</li>
+<li>关闭标签的作用是关闭 SVG 元素和文档本身。</li>
+</ul>
+</blockquote>
+<h2 id="html-svg-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#HTML引入SVG的方式" name="HTML引入SVG的方式"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>HTML引入SVG的方式</h2>
+<ul>
+<li><p>使用 <code>&lt;embed&gt;</code> 标签</p>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">embed</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"rect.svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"300"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"100"</span>
+<span class="hljs-attr">type</span>=<span class="hljs-string">"image/svg+xml"</span>
+<span class="hljs-attr">pluginspage</span>=<span class="hljs-string">"http://www.adobe.com/svg/viewer/install/"</span> /&gt;</span>
+</code></pre>
+</li>
+<li><p>使用 <code>&lt;object&gt;</code> 标签</p>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">data</span>=<span class="hljs-string">"rect.svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"300"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"100"</span>
+<span class="hljs-attr">type</span>=<span class="hljs-string">"image/svg+xml"</span>
+<span class="hljs-attr">codebase</span>=<span class="hljs-string">"http://www.adobe.com/svg/viewer/install/"</span> /&gt;</span>
+</code></pre>
+</li>
+<li><p>使用 <code>&lt;iframe&gt;</code>标签</p>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"rect.svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"300"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"100"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+`<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span>&gt;</span>` 标签可工作在大部分的浏览器中。
+</code></pre>
+</li>
+</ul>
+<h2 id="h5-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#H5的引入方式" name="H5的引入方式"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>H5的引入方式</h2>
+<ul>
+<li>把 SVG 直接嵌入 HTML 页面<pre><code>&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190"&gt;
+&lt;polygon points="100,10 40,180 190,60 10,60 160,180"
+style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" /&gt;
+&lt;/svg&gt;
+</code></pre></li>
+</ul>
+<h2 id="svg-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#svg 的形状" name="svg 的形状"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>svg 的形状</h2>
+<ul>
+<li>SVG 有一些预定义的形状元素，可被开发者使用和操作</li>
+<li>矩形 <code>&lt;rect&gt;</code></li>
+<li>圆形 <code>&lt;circle&gt;</code></li>
+<li>椭圆 <code>&lt;ellipse&gt;</code></li>
+<li>线 <code>&lt;line&gt;</code></li>
+<li>折线 <code>&lt;polyline&gt;</code></li>
+<li>多边形 <code>&lt;polygon&gt;</code></li>
+<li>路径 <code>&lt;path&gt;</code></li>
+</ul>
+<h2 id="svg-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#SVG的样式" name="SVG的样式"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>SVG的样式</h2>
+<blockquote>
+<p>主要是给svg定义的形状添加样式。
+| 样式和属性     | 含义    | 可能的值 |
+| :------------- | :------------- |:------|
+| 样式和属性     | 含义    | 可能的值 |
+| fill|    填充 |    颜色值|
+| stroke|    描边 |    颜色值 |
+| stroke-width |    描边宽度    | 数字（通常以像素为单位）|
+| opacity    | 不透明度    | 0.0（完全透明）和1.0（完全不透明）之间的数值|
+| font-family    | 字体    | text标签特有，CSS字体|
+| font-size    | 字体大小    | text标签特有，数字|
+| text-anchor    | 对齐方式    | text标签特有，left/center/right|</p>
+</blockquote>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#形状实例" name="形状实例"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>形状实例</h2>
+<ul>
+<li><p>矩形</p>
+<blockquote>
+<p>x和y的指定左上角的坐标，width和height指定矩形的尺寸。</p>
+</blockquote>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">rect</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"20"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"20"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"250"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"250"</span>
+<span class="hljs-attr">style</span>=<span class="hljs-string">"fill:blue;stroke:pink;stroke-width:5;
+fill-opacity:0.1;stroke-opacity:0.9"</span>/&gt;</span>
+</code></pre>
+</li>
+<li><p>圆形</p>
+<blockquote>
+<p>cx和cy指定圆心的坐标，ŗ表示半径大小</p>
+</blockquote>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"40"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"black"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"red"</span>/&gt;</span>
+</code></pre>
+</li>
+<li><p>椭圆</p>
+<blockquote>
+<p>cx和cy指定圆心坐标，rx和ry分别指定横半轴纵半轴长度</p>
+</blockquote>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ellipse</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"250"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">ry</span>=<span class="hljs-string">"25"</span>/&gt;</span>
+</code></pre>
+</li>
+<li><p>线条</p>
+<blockquote>
+<p>用x1和Y1到指定线的一端的坐标，x2和y2指定的另一端的坐标。stroke指定描边让线是可见的</p>
+</blockquote>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">line</span> <span class="hljs-attr">x1</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">y1</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">x2</span>=<span class="hljs-string">"300"</span> <span class="hljs-attr">y2</span>=<span class="hljs-string">"300"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"stroke:rgb(99,99,99);stroke-width:2"</span>/&gt;</span>
+</code></pre>
+</li>
+<li><p>多边形</p>
+<blockquote>
+<p>points 表示多边形的每一个点</p>
+</blockquote>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"220,100 ,300,210 ,170,250"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"fill:#cccccc;stroke:#000000;stroke-width:1"</span>/&gt;</span>
+</code></pre>
+</li>
+<li><p>文本</p>
+<blockquote>
+<p>x和y指定文本的位置。</p>
+</blockquote>
+<pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"250"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"25"</span>&gt;</span>Easy-peasy<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+</article>
+                <!-- 上下翻页 -->
+                <div class="main-sibling on" id="mainSibling">
+                    <p><span>上一篇：</span>
+                        <a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/03-html5%E8%A1%A8%E5%8D%95%E6%96%B0%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90">html5表单新功能解析</a>
+                    </p>
+                    <p><span>下一篇：</span>
+                        <a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/05-css3%E7%AE%80%E4%BB%8B">css3简介</a>
+                    </p>
+                </div>
+                <!-- 全库搜索 -->
+                <div class="search-box" id="searchBox">
+                    <div class="search-update">
+                        <input type="button" id="searchUpdate" value="更新所有缓存">
+                        <div class="text">
+                            <p>上次完全更新：<time id="cacheLasttime">0000-00-00 00:00:00</time></p>
+                            <p>文档总数：<b id="cacheDocTotal">34</b> / <span>已缓存：<i id="cacheState">61%</i></span></p>
+                        </div>
+                    </div>
+                    <h2>全库搜索</h2>
+                    <div class="search-input">
+                        <input type="text" id="searchText" placeholder="请输入搜索内容">
+                        <input type="button" id="search" value="搜 索">
+                    </div>
+                    <div class="search-results" id="results">
+                        <div class="search-result-message" id="resultMsg"></div>
+                        <ul class="search-list"></ul>
+                        <div class="search-result-more" id="resultMore">显示更多</div>
+                        <script id="template:searchResult" type="text/html">
+                            <li class="search-item">
+                                <a href="?file={{path}}">
+                                    <div class="content">
+                                        <strong>{{title}}</strong>
+                                        {{api}}
+                                        {{content}}
+                                    </div>
+                                    <div class="bottom">
+                                        <p>位置：<span>{{path}}</span></p>
+                                        <div class="time">最后缓存于
+                                            <time>{{time}}</time>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </script>
+                    </div>
+                </div>
+                <!-- 接口测试 -->
+
+            </div>
+        </div>
+        <!-- 签名 -->
+        <footer>
+            <div class="signature">Powered by
+                <a href="https://github.com/TevinLi/amWiki" target="_blank">amWiki</a>
+            </div>
+        </footer>
+        <!-- 返回顶部 -->
+        <aside>
+            <div class="back-top">
+                <a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#" class="back-icon">
+                    <svg>
+                        <use xlink:href="#backTop"></use>
+                    </svg>
+                </a>
+                <a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg#" class="back-text">返回顶部</a>
+            </div>
+        </aside>
+        <!-- js -->
+        <div class="hidden">
+            <script type="text/javascript" src="./svg_files/gbk.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/jquery-compat-3.1.0.min.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/marked.min.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/highlight.min.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/raphael-min.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/flowchart.min.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/amWiki.tools.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/amWiki.storage.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/amWiki.search.js.下载"></script>
+            <script type="text/javascript" src="./svg_files/amWiki.docs.js.下载"></script>
+
+            <script type="text/javascript" src="./svg_files/amWiki.js.下载"></script>
+        </div>
+        <!-- svg -->
+        <div class="hidden" id="svgSymbols"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="icon:navHome" viewBox="0 0 32 32" style="fill:currentColor">
+        <path d="m16 0l-16 16h4v16h24v-16h4l-16-16zm8 28h-6v-6h-4v6h-6v-14l8-6 8 5.7v14z"></path>
+    </symbol>
+    <symbol id="icon:navFilter" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M400.627447 927.694607c-25.929556 0-46.966685-21.037129-46.966685-46.966685L353.660762 542.308283 74.339102 172.687014c-11.313673-14.065344-13.514805-33.45188-5.748934-49.719378 7.828292-16.267499 24.339338-26.663266 42.380226-26.663266l801.437042 0c17.673521 0 33.879622 9.968026 41.891086 25.746384s6.482645 34.736129-3.975545 48.985668L669.540036 541.14683l0 211.700563c0 25.929556-21.037129 46.966685-46.966685 46.966685-25.929556 0-46.966685-21.037129-46.966685-46.966685L575.606667 525.796214c0-9.968026 3.180436-19.691481 9.051143-27.764344l235.101529-307.793108L208.94173 190.238762l228.317009 306.142515c6.665817 8.317433 10.335393 18.7132 10.335393 29.41596l0 354.931708C447.594131 906.657478 426.557002 927.694607 400.627447 927.694607z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navArrow" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M959.391517 255.877715 511.696078 703.573153 64.00064 255.877715Z"></path>
+        </g>
+    </symbol>
+    <symbol id="backTop" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M849.513502 524.698207l-308.405045-310.430168c-6.833639-6.867408-15.761985-10.1645-24.656563-10.095939-1.201361-0.103354-2.231831-0.686638-3.432169-0.686638-5.015224 0-9.68457 1.167592-13.978363 3.090385-4.325515 1.647523-8.445346 4.155646-11.948123 7.658424l-278.290167 277.807167c-13.426801 13.392008-13.46057 35.130102-0.034792 48.556902 6.695492 6.729262 15.487739 10.096962 24.312732 10.096962 8.7902 0 17.546631-3.367701 24.27794-10.028401l221.320665-220.97581 0 604.927459c0 18.99154 15.384385 34.340109 34.340109 34.340109 18.952654 0 34.340109-15.34857 34.340109-34.340109L547.359834 318.007751l253.460666 255.111259c6.696516 6.730285 15.557324 10.129708 24.347524 10.129708s17.512862-3.331885 24.208355-9.994632C862.872764 559.897893 862.90551 538.123984 849.513502 524.698207zM890.757858 134.805242 135.282614 134.805242c-18.954701 0-34.340109-15.384385-34.340109-34.340109s15.384385-34.340109 34.340109-34.340109l755.475244 0c18.98847 0 34.339086 15.384385 34.339086 34.340109S909.745305 134.805242 890.757858 134.805242z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navStart" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M102.548584 218.264049l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 461.299271l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 704.334493l818.644959 0 0 102.33062-818.644959 0 0-102.33062Z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navClose" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M588.99845 509.618605l412.775194-412.775194c19.051163-19.051163 19.051163-57.153488 0-82.555039-19.051163-19.051163-57.153488-19.051163-82.555039 0L512.793798 427.063566 100.018605 20.63876c-19.051163-19.051163-57.153488-19.051163-82.555039 0-19.051163 19.051163-19.051163 57.153488 0 82.555039L430.23876 509.618605l-412.775194 412.775194c-19.051163 19.051163-19.051163 57.153488 0 82.555039C30.164341 1011.299225 49.215504 1017.649612 61.916279 1017.649612s31.751938-6.350388 38.102326-19.051163L512.793798 592.173643l412.775194 412.775194c12.700775 12.700775 25.40155 19.051163 38.102326 19.051163 12.700775 0 31.751938-6.350388 38.102326-19.051163 19.051163-19.051163 19.051163-57.153488 0-82.555039L588.99845 509.618605z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder1" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M853.333333 260.352 512 260.352 512 192c0-35.328-28.672-64-64-64L170.666667 128c-47.104 0-85.333333 38.229333-85.333333 85.333333l0 132.352L85.333333 810.666667l0 0.085333c0 46.933333 38.4 85.333333 85.333333 85.333333l682.666667 0c46.933333 0 85.333333-38.4 85.333333-85.333333l0-465.066667C938.666667 298.752 900.266667 260.352 853.333333 260.352zM874.666667 789.418667c0 23.466667-19.2 42.666667-42.666667 42.666667L192 832.085333c-23.466667 0-42.666667-19.2-42.666667-42.666667l0-422.4L149.333333 263.082667 149.333333 234.666667c0-23.552 19.114667-42.666667 42.666667-42.666667l213.333333 0c23.552 0 42.666667 19.114667 42.666667 42.666667l0 89.685333 384 0c23.466667 0 42.666667 19.2 42.666667 42.666667L874.666667 789.418667z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder2" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M950.048 530.016c0-12-10.016-18.016-28-18.016l-580 0c-14.016 0-30.016 4-46.016 12s-30.016 16-38.016 28l-158.016 194.016c-6.016 8-8 14.016-8 20 0 12 8 20 28 20l580 0c14.016 0 30.016-4 46.016-12s28-18.016 38.016-28l156-194.016c6.016-8 10.016-16 10.016-22.016zM342.048 444l408 0 0-86.016c0-14.016-4-26.016-14.016-36s-22.016-14.016-36-14.016l-308 0c-14.016 0-26.016-6.016-36-16s-14.016-22.016-14.016-36l0-34.016c0-14.016-6.016-26.016-16-36s-22.016-16-36-16l-170.016 0c-14.016 0-26.016 6.016-36 16s-16 22.016-16 36l0 454.016 136-168c16-18.016 38.016-34.016 62.016-46.016 26.016-12 52-18.016 76-18.016zM1018.048 530.016c0 22.016-8 44-24 64l-158.016 194.016c-16 20-36 34.016-62.016 46.016-26.016 14.016-50.016 20-74.016 20l-580 0c-34.016 0-62.016-12-84-36-24-24-36-52-36-84l0-512c0-32 12-60 36-84 22.016-24 50.016-36 84-36l170.016 0c32 0 60 12 84 36s36 52 36 84l0 16 290.016 0c32 0 60 12 84 36s36 52 36 84l0 86.016 102.016 0c18.016 0 36 4 52 12 16 10.016 28 22.016 36 38.016 6.016 12 8 24 8 36z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:linkAnchor" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M616.601336 477.134935c0-96.148827-76.528977-174.34477-170.628122-174.34477l-138.339742 0.027629c-98.788957 0.007163-179.177845 78.195943-179.177845 174.330444l0.017396 69.698408c-0.024559 96.15292 80.406285 174.359097 179.205475 174.359097l38.696324 0.00307c19.815301-0.024559 35.851533-15.624862 35.848463-34.882462 0.00307-19.250436-16.032138-34.853809-35.823903-34.853809l-38.749536 0c-59.268872-0.007163-109.451808-46.925752-109.465111-104.604406l0-69.733201c0-57.668421 50.154283-104.58394 109.462041-104.594173l138.329509-0.024559c56.472176 0.024559 100.867292 46.911426 100.890828 104.618732l1.496074 34.872229c0 9.627265 3.810792 18.365276 9.969049 24.65554 6.178723 6.310729 14.728446 10.209526 24.153096 10.206456 18.84623 0.00307 34.118052-15.600303 34.118052-34.860972L616.601336 477.134935zM895.526977 477.152331c0.024559-96.148827-80.406285-174.355003-179.205475-174.359097l-38.696324-0.00307c-19.815301 0.024559-35.851533 15.627932-35.851533 34.882462 0 19.254529 16.036231 34.853809 35.826973 34.857902l38.745443 0c59.268872 0.00307 109.451808 46.922682 109.469204 104.604406l0 69.733201c0 57.668421-50.154283 104.58394-109.462041 104.591103l-138.329509 0.027629c-56.472176-0.024559-100.867292-46.911426-100.890828-104.618732l-1.496074-34.872229c0-9.630335-3.810792-18.365276-9.969049-24.65554-6.181793-6.314823-14.728446-10.209526-24.153096-10.205433-18.84623-0.007163-34.119075 15.600303-34.119075 34.860972l0 34.872229c0 96.145757 76.532047 174.340677 170.631192 174.340677l138.339742-0.024559c98.788957-0.007163 179.177845-78.199013 179.173752-174.330444L895.526977 477.152331z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:loading" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M955.733333 765.866667c0 0 0 2.133333 0 2.133333-12.8 21.333333-38.4 27.733333-57.6 14.933333-19.2-10.666667-27.733333-36.266667-17.066667-57.6l0 0c36.266667-64 57.6-136.533333 57.6-213.333333s-21.333333-151.466667-57.6-213.333333l0 0c-10.666667-19.2-4.266667-44.8 17.066667-57.6 21.333333-12.8 46.933333-4.266667 57.6 14.933333 0 0 0 2.133333 0 2.133333 42.666667 74.666667 68.266667 162.133333 68.266667 253.866667S998.4 691.2 955.733333 765.866667zM768 955.733333C768 955.733333 765.866667 955.733333 768 955.733333c-76.8 42.666667-164.266667 68.266667-256 68.266667s-179.2-25.6-253.866667-68.266667c0 0-2.133333 0-2.133333 0-21.333333-12.8-27.733333-38.4-14.933333-57.6 12.8-21.333333 38.4-27.733333 57.6-14.933333 0 0 0 0 2.133333 0l0 0C362.666667 917.333333 435.2 938.666667 512 938.666667s149.333333-21.333333 211.2-57.6l0 0c0 0 0 0 2.133333 0 21.333333-12.8 46.933333-4.266667 57.6 14.933333C795.733333 917.333333 789.333333 942.933333 768 955.733333zM727.466667 142.933333 727.466667 142.933333C663.466667 106.666667 590.933333 85.333333 512 85.333333s-151.466667 21.333333-213.333333 57.6l0 0c-19.2 10.666667-44.8 4.266667-57.6-17.066667C228.266667 106.666667 234.666667 81.066667 256 68.266667c0 0 2.133333 0 2.133333 0C332.8 25.6 420.266667 0 512 0s179.2 25.6 253.866667 68.266667c0 0 2.133333 0 2.133333 0 21.333333 12.8 27.733333 38.4 14.933333 57.6C772.266667 147.2 746.666667 153.6 727.466667 142.933333zM125.866667 782.933333C106.666667 795.733333 81.066667 789.333333 68.266667 768c0 0 0-2.133333 0-2.133333C25.6 691.2 0 603.733333 0 512s25.6-179.2 68.266667-253.866667c0 0 0-2.133333 0-2.133333 12.8-21.333333 38.4-27.733333 57.6-14.933333 21.333333 12.8 27.733333 38.4 14.933333 57.6 0 0 0 0 0 2.133333l0 0C106.666667 362.666667 85.333333 435.2 85.333333 512s21.333333 149.333333 57.6 211.2l0 0c0 0 0 0 0 2.133333C153.6 746.666667 147.2 772.266667 125.866667 782.933333z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:search" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M941.427376 910.59516c-16.080234 16.010649-69.712735 18.382673-85.792968 2.378164L631.709429 684.444491c61.748343-50.087768 70.796416-148.074454 70.796416-199.626573 0-148.759045-109.305475-260.410961-257.868045-260.410961-148.56871 0-256.612449 109.908202-256.612449 258.673387 0 148.752906 102.096283 261.730003 250.664993 261.730003 30.759561 0 44.760436 0.037862 72.293513-9.466606l0.38681 1.483794c7.000438-3.544733 77.435627-12.098549 77.435627 60.962443 0 20.455891-15.623839 41.425482-34.932604 48.178279-32.66905 11.420097-75.431993 16.936741-108.60144 16.936741-211.592093 0-381.180536-169.367409-381.180536-380.807029 0-211.370035 169.589466-382.79122 381.180536-382.79122 211.667817 0 381.180536 171.421184 381.180536 382.79122 0 65.812915-12.979616 127.682008-40.201607 179.176822l157.154249 159.189605C959.423239 836.475046 957.439048 894.660236 941.427376 910.59516L941.427376 910.59516zM941.427376 910.59516"></path>
+        </g>
+    </symbol>
+</svg></div>
+        
+        
+    <div style="width:0px;height:0px;position:absolute;top:-999px;left:-999px;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="erroralert" width="1px" height="1px"><param name="AllowScriptAccess" value="always"><param name="movie" value="http://tongji.baidu.com/logstat.swf"><embed name="erroralert" width="1px" height="1px" allowscriptaccess="always" align="middle" src="http://tongji.baidu.com/logstat.swf" type="application/x-shockwave-flash"></object></div>
+
+
+</body></html>

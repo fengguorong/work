@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <title>css盒子模型</title>
+        <link rel="stylesheet" type="text/css" href="./css盒子模型_files/markdownbody.github.css">
+        <link rel="stylesheet" type="text/css" href="./css盒子模型_files/lhjs.github-gist.css">
+        <link rel="stylesheet" type="text/css" href="./css盒子模型_files/amWiki.css">
+    </head>
+
+    <body>
+        <!-- 头部 -->
+        <header class="header">
+        </header>
+        <!-- 页面 -->
+        <div class="container">
+            <div class="nav">
+                <div class="menu-filter">
+                    <svg>
+                        <use xlink:href="#icon:navFilter"></use>
+                    </svg>
+                    <input type="text" id="menuFilter" value="" placeholder="请输入筛选条件" title="请输入筛选条件">
+                    <i class="off" title="清空筛选">×</i>
+                </div>
+                <div class="menu-search" id="searchShow" title="全库搜索">
+                    <svg>
+                        <use xlink:href="#icon:search"></use>
+                    </svg>
+                </div>
+                <!--<div class="menu-fold" title="展开/折叠导航栏所有菜单">
+                    <svg>
+                        <use xlink:href="#navFolder1"></use>
+                    </svg>
+                </div>-->
+                <nav class="menubar" id="menuBar"><h4 id="-file-" class=""><svg><use xlink:href="#icon:navHome"></use></svg><a href="http://uekdev.coding.me/layout/?file=%E9%A6%96%E9%A1%B5" title="返回首页">首页</a></h4>
+<h5 id="html-css-" class="on"><svg><use xlink:href="#icon:navArrow"></use></svg>html、css初识</h5>
+<ul style="display: block;">
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/01-html%E7%AE%80%E4%BB%8B%E6%A0%87%E7%AD%BE" title="html简介标签" class="">html简介标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont" title="css使用和font" class="">css使用和font</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B" title="css盒子模型" class="on">css盒子模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/04-css%E6%B5%AE%E5%8A%A8" title="css浮动">css浮动</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/05-css%E5%AE%9A%E4%BD%8D" title="css定位">css定位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/06-css%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98" title="css兼容问题">css兼容问题</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/07-css%E8%A1%A5%E5%85%85%E5%B1%9E%E6%80%A7" title="css补充属性">css补充属性</a></li>
+</ul>
+<h5 id="html-css-"><svg><use xlink:href="#icon:navArrow"></use></svg>html、css进阶</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/01-html5%E7%AE%80%E4%BB%8B" title="html5简介">html5简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/010-css3%E9%A2%9C%E8%89%B2%E5%92%8C%E6%B8%90%E5%8F%98" title="css3颜色和渐变">css3颜色和渐变</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/011-css3%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2" title="css3用户界面">css3用户界面</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/012-css3%E6%96%87%E6%9C%AC%E6%A8%A1%E5%9E%8B" title="css3文本模型">css3文本模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/013-css3%202D%E8%BD%AC%E6%8D%A2" title="css3 2D转换">css3 2D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/014-css3%203D%E8%BD%AC%E6%8D%A2" title="css3 3D转换">css3 3D转换</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/015-css3%E5%8A%A8%E7%94%BB" title="css3动画">css3动画</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/016-css3%E5%93%8D%E5%BA%94%E5%BC%8F" title="css3响应式">css3响应式</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/017-css3%E5%8D%95%E4%BD%8D" title="css3单位">css3单位</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/018-css3%E5%90%84%E7%A7%8D%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8%E4%BB%8B%E7%BB%8D" title="css3各种浏览器内核介绍">css3各种浏览器内核介绍</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/02-html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE" title="html5语义化标签">html5语义化标签</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/03-html5%E8%A1%A8%E5%8D%95%E6%96%B0%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90" title="html5表单新功能解析">html5表单新功能解析</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/04-html5%E5%8F%AF%E4%BC%B8%E7%BC%A9%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2svg" title="html5可伸缩矢量图形svg">html5可伸缩矢量图形svg</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/05-css3%E7%AE%80%E4%BB%8B" title="css3简介">css3简介</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/06-css3%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8" title="css3新增选择器">css3新增选择器</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/07-css3%E8%BE%B9%E6%A1%86" title="css3边框">css3边框</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/08-css3%E8%83%8C%E6%99%AF" title="css3背景">css3背景</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=002-html%E3%80%81css%E8%BF%9B%E9%98%B6/09-css3%E8%BF%87%E6%B8%A1%E5%80%92%E5%BD%B1" title="css3过渡倒影">css3过渡倒影</a></li>
+</ul>
+<h5 id="-"><svg><use xlink:href="#icon:navArrow"></use></svg>移动端布局</h5>
+<ul>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/01-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" title="移动端环境搭建">移动端环境搭建</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/02-hack" title="hack">hack</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/03-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%A7%86%E5%8F%A3viewport" title="移动端视口viewport">移动端视口viewport</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/04-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E7%99%BE%E5%88%86%E6%AF%94%E3%80%81%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端布局之百分比、流式布局">移动端布局之百分比、流式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/05-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80" title="移动端的响应式布局">移动端的响应式布局</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/06-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8B%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B" title="移动端布局之弹性盒模型">移动端布局之弹性盒模型</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/07-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%E4%B9%8Brem" title="移动端布局之rem">移动端布局之rem</a></li>
+<li><a href="http://uekdev.coding.me/layout/?file=003-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/08-12%E7%A7%8D%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F" title="12种移动端常见布局方式">12种移动端常见布局方式</a></li>
+</ul>
+</nav>
+            </div>
+            <div class="main" id="main">
+                <article class="markdown-body" id="view"><h1 id="css-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#css盒子模型" name="css盒子模型"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>css盒子模型</h1>
+<ul>
+<li>盒子模型是CSS的基石之一，布局最重要的概念，它指定元素如何呈现在页面当中。网页就是由许多个盒子通过不同的排列方式（纵向排列，横向排列，嵌套排列）堆积而成。</li>
+<li>页面上的每个元素都被浏览器看成是一个矩形的盒子，这个盒子由元素的内容、填充、边框和边界组成。</li>
+<li>默认情况下盒子的边框是无，背景色是透明，所以我们在默认情况下看不到盒子</li>
+</ul>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#盒子的相关概念和属性" name="盒子的相关概念和属性"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>盒子的相关概念和属性</h2>
+<ul>
+<li>内容<ul>
+<li>盒子里面所包含的元素和内容</li>
+</ul>
+</li>
+<li>填充(内边距) (padding)<ul>
+<li>盒子里面的内容到盒子的边框之间的距离. padding-left、 padding-right、 padding-top、padding-bottom</li>
+</ul>
+</li>
+<li>边框(border)<ul>
+<li>盒子本身有边框(border) border-left、 border-right、 border-top、 border-bottom</li>
+</ul>
+</li>
+<li>外边距(magin)<ul>
+<li>边框外和其它盒子之间 margin-left、 margin-right、 margin-top、margin-bottom</li>
+</ul>
+</li>
+<li>盒子实例图示
+<br>
+<img src="./css盒子模型_files/2016-12-13_010759.png" alt="盒子实例图示"></li>
+<li>盒子示意图示
+<br>
+<img src="./css盒子模型_files/2016-12-13_011313.png" alt="盒子实例图示"></li>
+</ul>
+<h2 id="-padding-margin-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#设置盒子padding和margin的方式" name="设置盒子padding和margin的方式"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>设置盒子padding和margin的方式</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">设定值的个数</th>
+<th style="text-align:left">写法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1个属性值</td>
+<td style="text-align:left">padding:40px;margin:40px;</td>
+<td>表示上下左右的值都是该值</td>
+</tr>
+<tr>
+<td style="text-align:left">2个属性值</td>
+<td style="text-align:left">padding:10px 10px;</td>
+<td>前者表示上下的值，后者表示左右的值</td>
+</tr>
+<tr>
+<td style="text-align:left">3个属性值</td>
+<td style="text-align:left">padding:10px 20px 10px;</td>
+<td>前者表示上边的值，中间的数值表示左右的值，后者表示下边的值</td>
+</tr>
+<tr>
+<td style="text-align:left">4个属性值</td>
+<td style="text-align:left">padding:10px 20px 10px 10px;</td>
+<td>依次表示上、右、下、左的值，即顺时针排序</td>
+</tr>
+<tr>
+<td style="text-align:left">单独设定属性值</td>
+<td style="text-align:left">padding-left、 padding-right、 padding-top、padding-bottom</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#盒子的宽高属性" name="盒子的宽高属性"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>盒子的宽高属性</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">盒子所占大小</th>
+<th style="text-align:left">计算方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">盒子所占宽度</td>
+<td style="text-align:left">width + padding-left + padding-right + border-left + border-right 设定宽度+左右内边距+左右边框</td>
+</tr>
+<tr>
+<td style="text-align:left">盒子所占高度</td>
+<td style="text-align:left">height + padding-top + padding-bottom + border-top + border-bottom 设定高度+上下内边距+上下边框</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">宽度设定的具体值</td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">高度设定的具体值</td>
+</tr>
+<tr>
+<td style="text-align:left">width auto</td>
+<td style="text-align:left">一般会是父元素的宽度</td>
+</tr>
+<tr>
+<td style="text-align:left">height auto</td>
+<td style="text-align:left">一般会是内容的高度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#边框" name="边框"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>边框</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">设置方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-width</td>
+<td style="text-align:left">border-top-width、border-right-width、border-bottom-width、border-left-width对某一面的边框宽度单独设置</td>
+</tr>
+<tr>
+<td style="text-align:left">border-color</td>
+<td style="text-align:left">设置四个方面的边框颜色，可以通过设置border-top-color、border-right-color、border-bottom-color、border-left-color对某一面的边框颜色单独设置</td>
+</tr>
+<tr>
+<td style="text-align:left">border-style</td>
+<td style="text-align:left">设置四个方面的边框样式，可以通过设置border-top-style、border-right-style、border-bottom-style、border-left-style对某一面的边框样式进行单独设置.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>border常见的样式<ul>
+<li>none：无样式</li>
+<li>dotted：点线</li>
+<li>dashed：虚线</li>
+<li>solid：实线</li>
+<li>double：双线</li>
+<li>groove：槽线</li>
+<li>ridge：脊线</li>
+<li>inset：内凹</li>
+<li>outset：外凸</li>
+</ul>
+</li>
+<li>实例<pre><code class="lang-css hljs"><span class="hljs-selector-class">.sample-border1</span>{
+<span class="hljs-attribute">border-top-width</span>:<span class="hljs-number">1px</span>;
+<span class="hljs-attribute">border-top-style</span>:dotted;
+<span class="hljs-attribute">border-top-color</span>:<span class="hljs-number">#cccccc</span>;
+}
+<span class="hljs-selector-class">.sample-border2</span>{
+<span class="hljs-attribute">border-top</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#cccccc</span>;
+<span class="hljs-attribute">border-left</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#cccccc</span>;
+<span class="hljs-attribute">border-right</span>:<span class="hljs-number">1px</span> soli <span class="hljs-number">#cccccc</span>;
+<span class="hljs-attribute">border-bottom</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#cccccc</span>;
+}
+// 缩写后
+<span class="hljs-selector-class">.sample-border1</span>{
+<span class="hljs-attribute">border-top</span>:<span class="hljs-number">1px</span> dashed <span class="hljs-number">#ccc</span>;
+}
+<span class="hljs-selector-class">.sample-border2</span>{
+ <span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#ccc</span>;
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#关于填充和边距的常见问题" name="关于填充和边距的常见问题"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>关于填充和边距的常见问题</h2>
+<ul>
+<li>大部分html元素的盒子属性(margin, padding)默认值都为0，有少数html元素的(margin, padding)浏览器默认值不为0，例如：body，p，ul，li，form标记等，因此我们有时有必要先设置它们的这些属性为0。</li>
+<li>相邻两个兄弟元素的外边距会发生合并，一般布局我们都会设定他们的外边距</li>
+<li>如果没有设置父级元素的内边距或边框那么他的子元素的边界会和其合并</li>
+<li>margin-top bug的问题:当两个容器嵌套时,如果外层容器和内层容器之间没有别的元素,并且外层容器没有边框和padding值的时候，部分浏览器会把内层元素的margin-top作用与父元素</li>
+<li>设定一个块元素居 中 <code>margin:0 auto;</code></li>
+<li>margin可以设置负值，padding不可以</li>
+<li>行内元素的margin值，只有左右，没有上下的值</li>
+</ul>
+<h2 id="-"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#标签分类" name="标签分类"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>标签分类</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">分类</th>
+<th style="text-align:left">特性</th>
+<th style="text-align:left">代表元素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">块标签</td>
+<td style="text-align:left">有宽、高属性，同时块标签会独占一行</td>
+<td style="text-align:left">H1～H6、P、li、div</td>
+</tr>
+<tr>
+<td style="text-align:left">行标签</td>
+<td style="text-align:left">不具有宽、高特性，mrgin属性的值，只有左右没有上下。也不会占一行</td>
+<td style="text-align:left">字体标签、span</td>
+</tr>
+<tr>
+<td style="text-align:left">行内块标签</td>
+<td style="text-align:left">既有行元素的属性即:不会独占一行又有块元素的属性即：可以设置宽高</td>
+<td style="text-align:left">img 、表单元素</td>
+</tr>
+</tbody>
+</table>
+<h2 id="display"><a class="anchor" href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#display" name="display"><svg><use xlink:href="#icon:linkAnchor"></use></svg></a>display</h2>
+<blockquote>
+<p>元素的在页面中的存在形式</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:left">特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>display: none;</code></td>
+<td style="text-align:left">可以让元素隐藏起来并且不占用页面空间,浏览器会完全忽略掉这个元素，该元素将不会被显示，也不会占据文档中的位置</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>display:block;</code></td>
+<td style="text-align:left">可以让元素具有块特性将块级元素</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>display:inline;</code></td>
+<td style="text-align:left">可以让块级元素变为行内元素</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>display:inline-block;</code></td>
+<td style="text-align:left">指定元素兼有块级和行级元素的特性，即在行内显示但是可以设定宽高</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>元素的相互转化</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">其它元素转化为块元素</td>
+<td style="text-align:left"><code>display:block</code></td>
+</tr>
+<tr>
+<td style="text-align:left">其它元素转化为行元素</td>
+<td style="text-align:left"><code>display:inline</code></td>
+</tr>
+<tr>
+<td style="text-align:left">其它元素转化为行内块元素</td>
+<td style="text-align:left"><code>display:inline-block</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>在IE6中当行内元素转换为块元素时，高度会比原有的高度大，所以要设置overflow:hidden,来做兼容。</p>
+</blockquote>
+</article>
+                <!-- 上下翻页 -->
+                <div class="main-sibling on" id="mainSibling">
+                    <p><span>上一篇：</span>
+                        <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/02-css%E4%BD%BF%E7%94%A8%E5%92%8Cfont">css使用和font</a>
+                    </p>
+                    <p><span>下一篇：</span>
+                        <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/04-css%E6%B5%AE%E5%8A%A8">css浮动</a>
+                    </p>
+                </div>
+                <!-- 全库搜索 -->
+                <div class="search-box" id="searchBox">
+                    <div class="search-update">
+                        <input type="button" id="searchUpdate" value="更新所有缓存">
+                        <div class="text">
+                            <p>上次完全更新：<time id="cacheLasttime">0000-00-00 00:00:00</time></p>
+                            <p>文档总数：<b id="cacheDocTotal">34</b> / <span>已缓存：<i id="cacheState">11%</i></span></p>
+                        </div>
+                    </div>
+                    <h2>全库搜索</h2>
+                    <div class="search-input">
+                        <input type="text" id="searchText" placeholder="请输入搜索内容">
+                        <input type="button" id="search" value="搜 索">
+                    </div>
+                    <div class="search-results" id="results">
+                        <div class="search-result-message" id="resultMsg"></div>
+                        <ul class="search-list"></ul>
+                        <div class="search-result-more" id="resultMore">显示更多</div>
+                        <script id="template:searchResult" type="text/html">
+                            <li class="search-item">
+                                <a href="?file={{path}}">
+                                    <div class="content">
+                                        <strong>{{title}}</strong>
+                                        {{api}}
+                                        {{content}}
+                                    </div>
+                                    <div class="bottom">
+                                        <p>位置：<span>{{path}}</span></p>
+                                        <div class="time">最后缓存于
+                                            <time>{{time}}</time>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </script>
+                    </div>
+                </div>
+                <!-- 接口测试 -->
+
+            </div>
+        </div>
+        <!-- 签名 -->
+        <footer>
+            <div class="signature">Powered by
+                <a href="https://github.com/TevinLi/amWiki" target="_blank">amWiki</a>
+            </div>
+        </footer>
+        <!-- 返回顶部 -->
+        <aside>
+            <div class="back-top">
+                <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#" class="back-icon">
+                    <svg>
+                        <use xlink:href="#backTop"></use>
+                    </svg>
+                </a>
+                <a href="http://uekdev.coding.me/layout/?file=001-html%E3%80%81css%E5%88%9D%E8%AF%86/03-css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B#" class="back-text">返回顶部</a>
+            </div>
+        </aside>
+        <!-- js -->
+        <div class="hidden">
+            <script type="text/javascript" src="./css盒子模型_files/gbk.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/jquery-compat-3.1.0.min.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/marked.min.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/highlight.min.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/raphael-min.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/flowchart.min.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/amWiki.tools.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/amWiki.storage.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/amWiki.search.js.下载"></script>
+            <script type="text/javascript" src="./css盒子模型_files/amWiki.docs.js.下载"></script>
+
+            <script type="text/javascript" src="./css盒子模型_files/amWiki.js.下载"></script>
+        </div>
+        <!-- svg -->
+        <div class="hidden" id="svgSymbols"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="icon:navHome" viewBox="0 0 32 32" style="fill:currentColor">
+        <path d="m16 0l-16 16h4v16h24v-16h4l-16-16zm8 28h-6v-6h-4v6h-6v-14l8-6 8 5.7v14z"></path>
+    </symbol>
+    <symbol id="icon:navFilter" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M400.627447 927.694607c-25.929556 0-46.966685-21.037129-46.966685-46.966685L353.660762 542.308283 74.339102 172.687014c-11.313673-14.065344-13.514805-33.45188-5.748934-49.719378 7.828292-16.267499 24.339338-26.663266 42.380226-26.663266l801.437042 0c17.673521 0 33.879622 9.968026 41.891086 25.746384s6.482645 34.736129-3.975545 48.985668L669.540036 541.14683l0 211.700563c0 25.929556-21.037129 46.966685-46.966685 46.966685-25.929556 0-46.966685-21.037129-46.966685-46.966685L575.606667 525.796214c0-9.968026 3.180436-19.691481 9.051143-27.764344l235.101529-307.793108L208.94173 190.238762l228.317009 306.142515c6.665817 8.317433 10.335393 18.7132 10.335393 29.41596l0 354.931708C447.594131 906.657478 426.557002 927.694607 400.627447 927.694607z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navArrow" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M959.391517 255.877715 511.696078 703.573153 64.00064 255.877715Z"></path>
+        </g>
+    </symbol>
+    <symbol id="backTop" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M849.513502 524.698207l-308.405045-310.430168c-6.833639-6.867408-15.761985-10.1645-24.656563-10.095939-1.201361-0.103354-2.231831-0.686638-3.432169-0.686638-5.015224 0-9.68457 1.167592-13.978363 3.090385-4.325515 1.647523-8.445346 4.155646-11.948123 7.658424l-278.290167 277.807167c-13.426801 13.392008-13.46057 35.130102-0.034792 48.556902 6.695492 6.729262 15.487739 10.096962 24.312732 10.096962 8.7902 0 17.546631-3.367701 24.27794-10.028401l221.320665-220.97581 0 604.927459c0 18.99154 15.384385 34.340109 34.340109 34.340109 18.952654 0 34.340109-15.34857 34.340109-34.340109L547.359834 318.007751l253.460666 255.111259c6.696516 6.730285 15.557324 10.129708 24.347524 10.129708s17.512862-3.331885 24.208355-9.994632C862.872764 559.897893 862.90551 538.123984 849.513502 524.698207zM890.757858 134.805242 135.282614 134.805242c-18.954701 0-34.340109-15.384385-34.340109-34.340109s15.384385-34.340109 34.340109-34.340109l755.475244 0c18.98847 0 34.339086 15.384385 34.339086 34.340109S909.745305 134.805242 890.757858 134.805242z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navStart" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M102.548584 218.264049l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 461.299271l818.644959 0 0 102.33062-818.644959 0 0-102.33062ZM102.548584 704.334493l818.644959 0 0 102.33062-818.644959 0 0-102.33062Z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:navClose" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M588.99845 509.618605l412.775194-412.775194c19.051163-19.051163 19.051163-57.153488 0-82.555039-19.051163-19.051163-57.153488-19.051163-82.555039 0L512.793798 427.063566 100.018605 20.63876c-19.051163-19.051163-57.153488-19.051163-82.555039 0-19.051163 19.051163-19.051163 57.153488 0 82.555039L430.23876 509.618605l-412.775194 412.775194c-19.051163 19.051163-19.051163 57.153488 0 82.555039C30.164341 1011.299225 49.215504 1017.649612 61.916279 1017.649612s31.751938-6.350388 38.102326-19.051163L512.793798 592.173643l412.775194 412.775194c12.700775 12.700775 25.40155 19.051163 38.102326 19.051163 12.700775 0 31.751938-6.350388 38.102326-19.051163 19.051163-19.051163 19.051163-57.153488 0-82.555039L588.99845 509.618605z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder1" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M853.333333 260.352 512 260.352 512 192c0-35.328-28.672-64-64-64L170.666667 128c-47.104 0-85.333333 38.229333-85.333333 85.333333l0 132.352L85.333333 810.666667l0 0.085333c0 46.933333 38.4 85.333333 85.333333 85.333333l682.666667 0c46.933333 0 85.333333-38.4 85.333333-85.333333l0-465.066667C938.666667 298.752 900.266667 260.352 853.333333 260.352zM874.666667 789.418667c0 23.466667-19.2 42.666667-42.666667 42.666667L192 832.085333c-23.466667 0-42.666667-19.2-42.666667-42.666667l0-422.4L149.333333 263.082667 149.333333 234.666667c0-23.552 19.114667-42.666667 42.666667-42.666667l213.333333 0c23.552 0 42.666667 19.114667 42.666667 42.666667l0 89.685333 384 0c23.466667 0 42.666667 19.2 42.666667 42.666667L874.666667 789.418667z"></path>
+        </g>
+    </symbol>
+    <symbol id="navFolder2" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M950.048 530.016c0-12-10.016-18.016-28-18.016l-580 0c-14.016 0-30.016 4-46.016 12s-30.016 16-38.016 28l-158.016 194.016c-6.016 8-8 14.016-8 20 0 12 8 20 28 20l580 0c14.016 0 30.016-4 46.016-12s28-18.016 38.016-28l156-194.016c6.016-8 10.016-16 10.016-22.016zM342.048 444l408 0 0-86.016c0-14.016-4-26.016-14.016-36s-22.016-14.016-36-14.016l-308 0c-14.016 0-26.016-6.016-36-16s-14.016-22.016-14.016-36l0-34.016c0-14.016-6.016-26.016-16-36s-22.016-16-36-16l-170.016 0c-14.016 0-26.016 6.016-36 16s-16 22.016-16 36l0 454.016 136-168c16-18.016 38.016-34.016 62.016-46.016 26.016-12 52-18.016 76-18.016zM1018.048 530.016c0 22.016-8 44-24 64l-158.016 194.016c-16 20-36 34.016-62.016 46.016-26.016 14.016-50.016 20-74.016 20l-580 0c-34.016 0-62.016-12-84-36-24-24-36-52-36-84l0-512c0-32 12-60 36-84 22.016-24 50.016-36 84-36l170.016 0c32 0 60 12 84 36s36 52 36 84l0 16 290.016 0c32 0 60 12 84 36s36 52 36 84l0 86.016 102.016 0c18.016 0 36 4 52 12 16 10.016 28 22.016 36 38.016 6.016 12 8 24 8 36z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:linkAnchor" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M616.601336 477.134935c0-96.148827-76.528977-174.34477-170.628122-174.34477l-138.339742 0.027629c-98.788957 0.007163-179.177845 78.195943-179.177845 174.330444l0.017396 69.698408c-0.024559 96.15292 80.406285 174.359097 179.205475 174.359097l38.696324 0.00307c19.815301-0.024559 35.851533-15.624862 35.848463-34.882462 0.00307-19.250436-16.032138-34.853809-35.823903-34.853809l-38.749536 0c-59.268872-0.007163-109.451808-46.925752-109.465111-104.604406l0-69.733201c0-57.668421 50.154283-104.58394 109.462041-104.594173l138.329509-0.024559c56.472176 0.024559 100.867292 46.911426 100.890828 104.618732l1.496074 34.872229c0 9.627265 3.810792 18.365276 9.969049 24.65554 6.178723 6.310729 14.728446 10.209526 24.153096 10.206456 18.84623 0.00307 34.118052-15.600303 34.118052-34.860972L616.601336 477.134935zM895.526977 477.152331c0.024559-96.148827-80.406285-174.355003-179.205475-174.359097l-38.696324-0.00307c-19.815301 0.024559-35.851533 15.627932-35.851533 34.882462 0 19.254529 16.036231 34.853809 35.826973 34.857902l38.745443 0c59.268872 0.00307 109.451808 46.922682 109.469204 104.604406l0 69.733201c0 57.668421-50.154283 104.58394-109.462041 104.591103l-138.329509 0.027629c-56.472176-0.024559-100.867292-46.911426-100.890828-104.618732l-1.496074-34.872229c0-9.630335-3.810792-18.365276-9.969049-24.65554-6.181793-6.314823-14.728446-10.209526-24.153096-10.205433-18.84623-0.007163-34.119075 15.600303-34.119075 34.860972l0 34.872229c0 96.145757 76.532047 174.340677 170.631192 174.340677l138.339742-0.024559c98.788957-0.007163 179.177845-78.199013 179.173752-174.330444L895.526977 477.152331z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:loading" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M955.733333 765.866667c0 0 0 2.133333 0 2.133333-12.8 21.333333-38.4 27.733333-57.6 14.933333-19.2-10.666667-27.733333-36.266667-17.066667-57.6l0 0c36.266667-64 57.6-136.533333 57.6-213.333333s-21.333333-151.466667-57.6-213.333333l0 0c-10.666667-19.2-4.266667-44.8 17.066667-57.6 21.333333-12.8 46.933333-4.266667 57.6 14.933333 0 0 0 2.133333 0 2.133333 42.666667 74.666667 68.266667 162.133333 68.266667 253.866667S998.4 691.2 955.733333 765.866667zM768 955.733333C768 955.733333 765.866667 955.733333 768 955.733333c-76.8 42.666667-164.266667 68.266667-256 68.266667s-179.2-25.6-253.866667-68.266667c0 0-2.133333 0-2.133333 0-21.333333-12.8-27.733333-38.4-14.933333-57.6 12.8-21.333333 38.4-27.733333 57.6-14.933333 0 0 0 0 2.133333 0l0 0C362.666667 917.333333 435.2 938.666667 512 938.666667s149.333333-21.333333 211.2-57.6l0 0c0 0 0 0 2.133333 0 21.333333-12.8 46.933333-4.266667 57.6 14.933333C795.733333 917.333333 789.333333 942.933333 768 955.733333zM727.466667 142.933333 727.466667 142.933333C663.466667 106.666667 590.933333 85.333333 512 85.333333s-151.466667 21.333333-213.333333 57.6l0 0c-19.2 10.666667-44.8 4.266667-57.6-17.066667C228.266667 106.666667 234.666667 81.066667 256 68.266667c0 0 2.133333 0 2.133333 0C332.8 25.6 420.266667 0 512 0s179.2 25.6 253.866667 68.266667c0 0 2.133333 0 2.133333 0 21.333333 12.8 27.733333 38.4 14.933333 57.6C772.266667 147.2 746.666667 153.6 727.466667 142.933333zM125.866667 782.933333C106.666667 795.733333 81.066667 789.333333 68.266667 768c0 0 0-2.133333 0-2.133333C25.6 691.2 0 603.733333 0 512s25.6-179.2 68.266667-253.866667c0 0 0-2.133333 0-2.133333 12.8-21.333333 38.4-27.733333 57.6-14.933333 21.333333 12.8 27.733333 38.4 14.933333 57.6 0 0 0 0 0 2.133333l0 0C106.666667 362.666667 85.333333 435.2 85.333333 512s21.333333 149.333333 57.6 211.2l0 0c0 0 0 0 0 2.133333C153.6 746.666667 147.2 772.266667 125.866667 782.933333z"></path>
+        </g>
+    </symbol>
+    <symbol id="icon:search" viewBox="0 0 32 32" style="fill:currentColor">
+        <g transform="scale(0.03125, 0.03125)">
+            <path d="M941.427376 910.59516c-16.080234 16.010649-69.712735 18.382673-85.792968 2.378164L631.709429 684.444491c61.748343-50.087768 70.796416-148.074454 70.796416-199.626573 0-148.759045-109.305475-260.410961-257.868045-260.410961-148.56871 0-256.612449 109.908202-256.612449 258.673387 0 148.752906 102.096283 261.730003 250.664993 261.730003 30.759561 0 44.760436 0.037862 72.293513-9.466606l0.38681 1.483794c7.000438-3.544733 77.435627-12.098549 77.435627 60.962443 0 20.455891-15.623839 41.425482-34.932604 48.178279-32.66905 11.420097-75.431993 16.936741-108.60144 16.936741-211.592093 0-381.180536-169.367409-381.180536-380.807029 0-211.370035 169.589466-382.79122 381.180536-382.79122 211.667817 0 381.180536 171.421184 381.180536 382.79122 0 65.812915-12.979616 127.682008-40.201607 179.176822l157.154249 159.189605C959.423239 836.475046 957.439048 894.660236 941.427376 910.59516L941.427376 910.59516zM941.427376 910.59516"></path>
+        </g>
+    </symbol>
+</svg></div>
+        
+        
+    <div style="width:0px;height:0px;position:absolute;top:-999px;left:-999px;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="erroralert" width="1px" height="1px"><param name="AllowScriptAccess" value="always"><param name="movie" value="http://tongji.baidu.com/logstat.swf"><embed name="erroralert" width="1px" height="1px" allowscriptaccess="always" align="middle" src="http://tongji.baidu.com/logstat.swf" type="application/x-shockwave-flash"></object></div>
+
+
+</body></html>
